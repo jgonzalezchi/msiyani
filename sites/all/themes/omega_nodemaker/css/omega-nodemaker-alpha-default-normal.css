@@ -1,0 +1,205 @@
+/* Include Default Variables & Mixins */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the variables used throughout the entire NodeMaker
+ * suite of SCSS files. 
+ *
+ * You can achieve a very different look for your site simply by editing 
+ * the variables present on this page.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains various mixins to be used on elements throughout the site.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles and mixins related to header fonts
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #0678be;
+    text-decoration: none; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      color: #999999; }
+    h1 a.active, h2 a.active, h3 a.active, h4 a.active, h5 a.active, h6 a.active {
+      color: black; }
+
+h1 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 38px;
+  line-height: 38px; }
+
+h1#page-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h2 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h3 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h5 {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h6 {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h2.node-title {
+  margin-top: 5px; }
+
+/* Basic button style for submit buttons and some links */
+/* End Variables & Mixins */
+#toolbar div.toolbar-menu #toolbar-home {
+  display: block; }
+#toolbar div.toolbar-menu #toolbar-user {
+  display: block; }
+#toolbar div.toolbar-menu #toolbar-menu {
+  float: none;
+  display: block; }
+  #toolbar div.toolbar-menu #toolbar-menu li {
+    display: block;
+    float: none; }
+
+#zone-user-wrapper .mobile-menu {
+  display: none; }
+#zone-user-wrapper #block-system-user-menu {
+  display: block !important;
+  float: left;
+  margin-top: 0; }
+#zone-user-wrapper #block-search-form {
+  float: right;
+  display: block !important;
+  margin-top: 0; }
+  #zone-user-wrapper #block-search-form .form-item,
+  #zone-user-wrapper #block-search-form .form-actions {
+    display: block;
+    float: left;
+    margin: 2px 0 0 0; }
+    #zone-user-wrapper #block-search-form .form-item input,
+    #zone-user-wrapper #block-search-form .form-actions input {
+      margin-bottom: 0; }
+    #zone-user-wrapper #block-search-form .form-item input.form-text,
+    #zone-user-wrapper #block-search-form .form-actions input.form-text {
+      width: 200px;
+      height: 28px;
+      margin: 0 5px 0 0;
+      padding: 6px 8px;
+      font-weight: 600;
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
+      /* Opera/IE 8+ */ }
+    #zone-user-wrapper #block-search-form .form-item .form-submit,
+    #zone-user-wrapper #block-search-form .form-actions .form-submit {
+      display: inline-block;
+      *display: inline;
+      float: none;
+      width: auto; }
+#zone-user-wrapper #block-user-login {
+  display: block !important;
+  float: left;
+  margin-top: 0; }
+  #zone-user-wrapper #block-user-login .item-list {
+    display: inline-block;
+    *display: inline;
+    float: none;
+    margin-top: 2px; }
+  #zone-user-wrapper #block-user-login .form-item,
+  #zone-user-wrapper #block-user-login .form-actions {
+    display: block;
+    float: left;
+    margin: 2px 5px 0 0; }
+    #zone-user-wrapper #block-user-login .form-item input,
+    #zone-user-wrapper #block-user-login .form-actions input {
+      margin-bottom: 0; }
+    #zone-user-wrapper #block-user-login .form-item input.form-text,
+    #zone-user-wrapper #block-user-login .form-actions input.form-text {
+      width: 150px;
+      height: 28px;
+      margin: 0;
+      padding: 6px 8px;
+      font-weight: 600;
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
+      /* Opera/IE 8+ */ }
+    #zone-user-wrapper #block-user-login .form-item .form-submit,
+    #zone-user-wrapper #block-user-login .form-actions .form-submit {
+      display: inline-block;
+      *display: inline;
+      float: none;
+      width: auto; }
+
+/* Specifically the block nm_core provides */
+#block-menu-block-nm-core-mobile-menu {
+  display: none !important; }
+
+#block-nm-core-nodemaker-nice-menus-main {
+  display: block; }
+
+#zone-footer-wrapper #block-menu-block-nm-core-footer-menu {
+  display: block; }

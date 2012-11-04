@@ -1,0 +1,490 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file handles the primary dropdown navigation provided by a custom
+ * nice menus block.
+ * 
+ * The defaults here are for the mobile & small tablet version of the menu
+ *
+ * Overrides for positioning and behaviors can be found in:
+ * 
+ * omega-nodemaker-alpha-default-normal.scss
+ * omega-nodemaker-alpha-default-wide.scss
+ * 
+ * Javascript adjustments can be found in:
+ * 
+ * nodemaker.js (Drupal.behaviors.nodemakerNiceMenus)
+ * 
+ * Also, the default nicemenus.js has been removed in hook_js_alter()
+ */
+
+
+
+
+// mobile menu
+#block-menu-block-nm-core-mobile-menu {
+  display: none; // hidden as we use the menu toggle to show the menu
+  // hide the title for the block if it exists
+  h2.block-title {
+    display: none;
+  }
+  
+  .block-inner {
+    background: $main-menu-background-color;
+    border: $main-menu-border;
+    //display: none;  
+    
+  }
+  
+  ul.menu {
+    // top level
+    font-weight: $font_medium;
+    font-family: $headerfont;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    float: none; // turn off floating for mobile
+    
+    li {
+      // top level link
+      position: relative;
+      display: block;
+      padding: 0;    
+      background: none;
+      border: 0;
+      margin: 0;
+      float: none; // turn off floating for mobile
+      
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        background-color: $main-menu-item-background-color;
+        color: $main-menu-item-color;
+        border-bottom: $main-menu-item-border;
+        font-weight: $font_semibold;
+        
+        &:active,
+        &.active {          
+          color: $main-menu-item-active-color;
+          border-bottom: $main-menu-item-active-border;
+          background-color: $main-menu-item-active-background-color;
+        }
+        &:focus {
+          color: $main-menu-item-hover-color;
+          border-bottom: $main-menu-item-hover-border;
+          background-color: $main-menu-item-hover-background-color;
+        }
+      }
+      // active trail LI
+      &.active-trail {
+        > a {
+          color: $main-menu-item-active-color;
+          border-bottom: $main-menu-item-active-border;
+          background-color: $main-menu-item-active-background-color;
+        }
+      }
+      // last li item(s)
+      &:last-child {
+        a {
+          border-bottom: 0;
+        }
+      }
+      
+      // styling for our custom arrows to open sub-menus on mobile
+      span.menu-children {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        display: block;
+        background-image: url('../images/arrow-down.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: transform .5s ease-in;
+        -moz-transition: -moz-transform .5s ease-in;
+        -o-transition: -o-transform .5s ease-in;
+        -webkit-transition: -webkit-transform .5s ease-in;
+        
+        transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        
+        a.children-toggle {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: block;
+          background: none;
+          border: 0;
+          padding: 0;
+        }
+        &.flip {
+        	transform:rotate(-180deg);
+        	-o-transform:rotate(-180deg);
+        	-webkit-transform:rotate(-180deg);
+        	-moz-transform:rotate(-180deg);
+        }
+      }
+      
+      
+      
+      
+      
+      // second level
+      ul {
+        position: relative;
+        // for testing
+        display: none;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        border: 0;
+        border-bottom: $main-menu-item-border;
+        li {
+          // second level links (working great)
+          width: 100%;
+          a {
+            padding: 10px 20px 10px 50px;
+            background-image: url('../images/menu-subitem.png');
+            background-position: 20px center;
+            background-repeat: no-repeat;
+            
+            border-bottom: 0;
+            background-color: $secondary-menu-item-background-color;
+            color: $secondary-menu-item-color;
+            
+            &:focus {
+              background-color: $secondary-menu-item-hover-background-color;
+              color: $secondary-menu-item-hover-color;
+              border-bottom: $secondary-menu-item-hover-border;  
+            }
+            
+            &:active,
+            &.active {
+              background-color: $secondary-menu-item-active-background-color;
+              color: $secondary-menu-item-active-color;
+              border-bottom: $secondary-menu-item-active-border;  
+            }
+            
+            &:focus,
+            &:active,
+            &.active {
+              border-bottom: 0;
+            }
+          }
+          &.active-trail {
+            > a {
+              background-color: $secondary-menu-item-active-background-color;
+              color: $secondary-menu-item-active-color;
+              border-bottom: $secondary-menu-item-active-border;
+              border-bottom: 0;
+            }
+          }
+          
+          
+          // third level
+          ul {
+            position: relative;
+            // for testing
+            display: none;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            border: 0;
+            border-bottom: $main-menu-item-border;
+            li {
+              width: 100%;
+              // third level links (needs love)
+              a {
+                padding: 10px 20px 10px 80px;
+                background-image: url('../images/submenu-subitem.png');
+                background-position: 20px center;
+                background-repeat: no-repeat;
+                
+                border-bottom: 0;
+                background-color: $tertiary-menu-item-background-color;
+                color: $tertiary-menu-item-color;
+                
+                &:focus {
+                  background-color: $tertiary-menu-item-hover-background-color;
+                  color: $tertiary-menu-item-hover-color;
+                  border-bottom: $tertiary-menu-item-hover-border;  
+                }
+                
+                &:active,
+                &.active {
+                  background-color: $tertiary-menu-item-active-background-color;
+                  color: $tertiary-menu-item-active-color;
+                  border-bottom: $tertiary-menu-item-active-border;  
+                }
+                
+                &:foucs,
+                &:active,
+                &.active {
+                  border-bottom: 0;
+                }
+              }
+              // last menu item gets a different bg image
+              
+              &.last {
+                a {
+                  background-image: url('../images/submenu-subitem-last.png');
+                  background-position: 20px center;
+                }
+                
+              }
+              &.active-trail {
+                > a {
+                  background-color: $tertiary-menu-item-active-background-color;
+                  color: $tertiary-menu-item-active-color;
+                  border-bottom: $tertiary-menu-item-active-border;
+                  border-bottom: 0;
+                }
+              }
+            }
+          }
+          
+          // last menu item (second level) gets a different bg image
+          &.last {
+            a {
+              background-image: url('../images/menu-subitem-last.png');
+            }
+            
+            ul {
+              
+              li {
+                
+                a {
+                  background-image: url('../images/submenu-last-subitem.png');
+                }
+                // last submenu of the last submenu (lol)
+                &.last {
+                  
+                  a {
+                    background-image: url('../images/submenu-last-subitem-last.png');
+                  }
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    } 
+  }
+}
+
+// overrides for non-touch browsers
+html.no-touch {
+  #block-menu-block-nm-core-mobile-menu {
+    ul.menu li a:hover {
+      color: $main-menu-item-hover-color;
+      background-color: $main-menu-item-hover-background-color;
+      
+      &.children-toggle:hover {
+        background-color: transparent;
+      }
+    }
+    
+  }
+}
+
+
+/* Large screen menu (Nice Menus) */
+#block-nm-core-nodemaker-nice-menus-main {
+  display: none; // hide on mobile to start with
+  
+  h2.block-title {
+    display: none;
+  }
+  
+  .block-inner {
+    background: $main-menu-background-color;
+    border: $main-menu-border;    
+  }
+  
+  ul.nice-menu {
+    font-weight: $font_medium;
+    font-family: $headerfont;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    
+    li {
+      position: relative;
+      display: block;
+      padding: 0;    
+      background: none;
+      border: 0;
+      margin: 0;
+      
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        background-color: $main-menu-item-background-color;
+        color: $main-menu-item-color;
+        border-right: $main-menu-item-border;
+        font-weight: $font_semibold;
+        
+        &:active,
+        &.active {
+
+          color: $main-menu-item-active-color;
+          border-right: $main-menu-item-active-border;
+          background-color: $main-menu-item-active-background-color;
+
+        }
+        &:focus,
+        &:hover {
+          color: $main-menu-item-hover-color;
+          background-color: $main-menu-item-hover-background-color;
+        }
+      }
+      &.active-trail {
+        > a {
+          color: $main-menu-item-active-color;
+          border-right: $main-menu-item-active-border;
+          background-color: $main-menu-item-active-background-color;
+        }
+      }
+      &:last-child {
+        a {
+          border-right: 0;
+        }
+      }
+      
+      &.menuparent {
+        > a {
+          
+        }
+      }
+      // second level menu
+      ul {
+        border: $main-menu-border;
+        
+        li {
+          a {
+            border-right: 0;
+            border-bottom: $secondary-menu-item-border;
+          }
+          &:last-child {
+            a {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// footer links block
+#block-menu-block-nm-core-footer-menu {
+  margin-bottom: 20px;
+  h2.block-title {
+    display: none;
+  }
+  
+  ul.menu li {
+    font-weight: $font_normal;
+    font-size: 18px;
+    //padding: 20px 40px 40px 0;
+    font-family: $headerfont;
+    
+    ul {
+      margin-top: 10px;      
+      
+      li, li.leaf {
+        font-family: $bodyfont;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 0;
+        
+        ul {
+          margin: 5px 0;
+          
+          li {
+            
+            list-style-type: circle;
+            margin-left: 10px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// footer links menu
+#block-menu-menu-footer-links {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+  
+  h2.block-title {
+    display: none;
+  }
+  
+  ul.menu,
+  .item-list ul {
+    display: inline-block;
+    *display: inline;
+    
+    li, li.leaf {
+      font-weight: $font_ultrabold;
+      display: inline-block;
+      *display: inline;
+      padding: 0 8px;
+      border-right: 1px solid $footermenulinkcolor; 
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

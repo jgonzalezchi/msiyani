@@ -1,0 +1,562 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file provides default styles for NodeMaker specific blocks & pages
+ * Styles here will not apply when using a ThemeGeeks theme without a NodeMaker installation
+ */
+div.more-link {
+  clear: both;
+}
+
+#block-views-nm-blog-recent,
+#block-system-main {
+  .view-nm-blog,
+  .view-nm-blog-by-user {
+    position: relative;
+    width: 100%;
+    .view-content {
+      position: relative;
+    }
+    .views-row {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .node {
+      //@include element-background();  
+    }
+  }
+}
+
+#block-views-nm-announcements-recent,
+#block-system-main .view-nm-announcements {
+  position: relative;
+  width: 100%;
+  .view-content {
+    position: relative;
+  }
+  .views-row {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .node {
+    //@include element-background();  
+  } 
+}
+
+
+
+#block-views-nm-announcements-recent {
+  .views-row {
+    margin-bottom: 20px;
+    .views-field {
+      margin: 0;
+    }
+    
+    
+  }
+}
+
+#block-views-nm-galleries-recent,
+#block-system-main .view-nm-galleries  {
+  position: relative;
+  width: 100%;
+  .view-content {
+    position: relative;
+  }
+  .views-row {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.node-nm-gallery {
+  .node-content {
+    //@include element-background();  
+  }
+  
+  
+
+  h2.node-title {
+    @include h3();
+    margin-top: 5px;
+  }
+  .photo-count {
+    font-size: 11px;
+    color: #777;
+  }
+  
+  &.node-teaser {
+    h2.node-title {
+      @include h5();
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+    .photo-count {
+
+    }
+  }
+   
+}
+
+
+.page-landing #block-system-main .view-nm-landing {
+  position: relative;
+  width: 100%;
+  .view-content {
+    position: relative;
+  }
+  .views-row {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+#region-sidebar-first #block-views-nm-galleries-recent .block-inner {
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  background: none;
+}
+
+#block-views-nm-events-mini-calendar {
+  // calendar block
+  .date-nav-wrapper {
+    margin-top: 0;
+
+    .date-nav {
+      position: relative;
+      min-height: 36px;
+      padding-bottom: 0;
+    }
+    ul.pager {
+      margin: 0;
+      padding: 0;
+    }
+    .date-prev,
+    .date-next {
+      display: block;
+      background: none;
+      height: 36px;
+      width: 36px;
+      padding: 0;
+      margin: 0;
+      top: 0;
+        
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 32px;
+        width: 32px;
+        line-height: 32px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    
+    .date-heading {
+      h3 {
+        @include h5();
+        line-height: 36px;
+      }
+    }
+  }
+  .calendar-calendar {
+    table {
+      thead {
+        th {
+          padding: 4px 8px;
+        }
+      }
+      tbody {
+        td {
+          padding: 4px 8px;
+        }
+      }
+    }
+  }
+}
+.node-forum {
+  &.node-teaser {
+    h2.node-title {
+      @include h3();
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+}
+.node-nm-event {
+  .field-name-field-nm-date {
+    font-size: 12px;
+    color: #888;
+  }
+  // calendar icons
+  .event-summary {
+    position: relative;
+    padding-left: 60px;
+    min-height: 55px;
+    
+    h2.node-title {
+      @include h3();
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  
+  .calendar-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    margin-right: 10px;
+    margin-bottom: 0;
+    width: 50px;
+    
+    border: 1px solid #999;
+    text-align: center;
+    
+    .month {
+      background: #999;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #FFF;
+      font-weight: $font_semibold;
+    }
+    .day {
+      font-size: 32px;
+      line-height: 24px;
+      font-family: $headerfont;
+      font-weight: $font_semibold;
+      padding: 5px 0 10px 0;
+    }
+  }
+  
+  h2.node-title {
+    @include h2();
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .field-name-field-nm-date {
+    font-size: 12px;
+  }
+  
+  .field-name-field-nm-headline-image {
+    clear: both;
+    margin-top: 10px;
+  }
+}
+
+.view-display-id-month,
+.view-display-id-week,
+.view-display-id-day,
+.view-display-id-year {
+  .view-header {
+    position: relative;
+  }
+  
+  .date-heading {
+    h3 {
+      display: none;
+    }
+  }
+  .date-nav-wrapper {
+    margin-top: 0;
+    
+    .date-nav {
+      padding-bottom: 0;
+      margin-bottom: 10px;
+      
+      ul.pager {
+        margin: 0;
+
+        li {
+          position: relative;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: none;
+          margin: 0;
+          padding: 0;
+          
+          a {
+            margin: 0;
+            padding: 0;
+            background: none;
+            border: 0;
+            
+            @include button();
+          }
+        }
+        li.date-prev {
+          float: left;
+        }
+        li.date-next {
+          float: right;
+        }
+      }
+    }
+  }
+  
+  .calendar-calendar {
+    table {
+      th {
+        padding: 8px 16px;
+      }
+    }
+    .week-view,
+    .day-view,
+    .year-view {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// fix the year calendar
+.calendar-calendar {
+  .year-view {
+    
+    .calendar-calendar {
+      
+      margin-bottom: 20px;
+      .month-view {
+        @include element-background();  
+      }
+      
+      .date-nav {
+        background: none;
+        padding: 0;
+        margin-bottom: 5px;
+      }
+      .date-heading {
+        a {
+          @include h5();
+          font-weight: normal;
+          display: block;
+          padding: 10px;
+        }
+      }
+      
+      table {
+        th, td {
+          width: 14.28571428571429%;
+          padding: 8px;
+        }
+      }
+    }
+  }
+}
+
+.node-type-nm-event {
+  #block-system-main {
+    .node-nm-event {
+      
+      .event-date {
+        border-bottom: 1px solid #CCC;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        
+        h5 {
+          font-size: 18px;
+          font-family: $altbodyfont;
+          font-weight: bold;
+          margin-top: 5px;
+          margin-bottom: 0px;
+          color: $defaultheaderlinkcolor;
+        }
+        
+        span {
+          font-size: 24px;
+          font-family: $altbodyfont;
+          color: #7b7c7c;
+        }
+        
+        .event-start {
+          width: 49%;
+          float: left;
+          text-align: left;
+        }
+        .event-end {
+          width: 49%;
+          float: right;
+          text-align: right;
+        }
+      }
+      
+      .event-info {
+        border-top: 1px solid #CCC;
+        padding-top: 10px;
+        margin-top: 10px;
+        
+        .field-label {
+          font-size: 18px;
+          font-family: $altbodyfont;
+          font-weight: bold;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          color: $defaultheaderlinkcolor;
+        }
+        .event-map {
+          float: right;
+          width: 65%;
+        }
+        .event-details {
+          float: left;
+          width: 34%;
+          
+          .field-items {
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+          .event-address {
+            .name-block {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#block-views-nm-events-upcoming {
+  margin-bottom: 20px;
+  
+  
+  
+  .view-display-id-upcoming > .view-content {
+    @include element-background();
+    margin-bottom: 20px;
+  }
+  
+  .view-nm-events {
+    
+    h2.node-title {
+      font-size: 20px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    // the attachment (first one) should be bigger;
+    .attachment h2.node-title {
+      @include h2();
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    
+    .node {
+      border-bottom: 1px solid #DDD;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      
+
+    }
+    
+    ul li:last-child .node {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    
+    .attachment .node,
+    .attachment ul li:last-child .node {
+      border-bottom: 1px solid #DDD;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+    .attachment .node .event-summary {
+      margin-bottom: 10px;
+    }
+    .item-list ul {
+      margin: 0;
+      font-size: 12px;
+      
+      li {
+        list-style-type: none;
+        margin: 0;
+        
+      }
+    }
+  }
+}
+
+// powered by message
+#block-system-powered-by {
+  font-size: 10px;
+  line-height: 14px;
+  
+  h3 {
+    margin: 0;
+    display: inline-block;
+    *display: inline;
+    font-size: 10px;
+    font-weight: $font_semibold;
+    font-family: $bodyfont;
+  }
+  .item-list ul {
+    display: inline-block;
+    *display: inline;
+    
+    
+    li {
+      font-weight: $font_ultrabold;
+      display: inline-block;
+      *display: inline;
+      padding: 0 8px;
+      border-right: 1px solid $footermenulinkcolor; 
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+
+.view-display-id-gallery_thumbs {
+  .colorbox a {
+    padding: 0;
+  }
+}
+
+#block-system-main .view-display-id-thumb_page {
+  .views-row {
+    margin-bottom: 5px;
+    display: block;
+  }
+  .colorbox a {
+    display: block;
+  }
+}
+.block-boxes-gallery {
+  margin-top: 20px;
+}
+
+.page-landing {
+  h1#page-title {
+    display: none;
+  }
+  
+  #breadcrumb {
+    display: none;
+  }
+  
+  .zone-content {
+    padding-top: 20px;
+  }
+}
+
+#block-menu-block-nm-core-footer-menu {
+  display: none;
+}

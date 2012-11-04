@@ -1,0 +1,18 @@
+#breadcrumb {
+  display: block; }
+
+#zone-branding-wrapper .logo-img {
+  text-align: left; }
+
+#zone-footer-wrapper #block-menu-block-nm-core-footer-menu ul.menu li {
+  float: left;
+  padding: 0px;
+  margin-right: 20px;
+  width: 160px; }
+  #zone-footer-wrapper #block-menu-block-nm-core-footer-menu ul.menu li ul li {
+    display: block;
+    float: none;
+    font-weight: normal;
+    padding: 0; }
+  #zone-footer-wrapper #block-menu-block-nm-core-footer-menu ul.menu li:nth-child(4n+4) {
+    margin-right: 0; }

@@ -1,0 +1,47 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains pager styles for default pager, views pagers, etc.
+ */
+ 
+ul.pager,
+.item-list ul.pager {
+  font-size: 12px;
+  margin: 10px 0;
+  
+  li {
+    display: inline-block;
+    *display: inline;
+    margin: 0 2px;
+    padding: 0;
+    
+    a {
+      margin: 0;
+      padding: 5px 10px;  
+      background-color: $pager-item-background-color;
+      border: $pager-item-border;
+      text-decoration: none;
+    }
+    
+    
+    &.pager-current {
+      margin: 0 2px;
+      padding: 5px 10px;  
+      background-color: $pager-item-background-color;
+      border: $pager-item-border;
+    }
+    
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

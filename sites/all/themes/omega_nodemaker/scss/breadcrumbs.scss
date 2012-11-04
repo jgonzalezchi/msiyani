@@ -1,0 +1,55 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file provides default styles for the Drupal breadcrumb.
+ */
+#breadcrumb {
+  // by default not displayed in mobile
+  // see omega-nodemaker-alpha-default.scss to see it turned back on when not on mobile.
+  display: none;
+  
+  background-color: $breadcrumbbgcolor;
+  border: $breadcrumbborder;
+  font-size: $breadcrumbfontsize;
+  line-height: $breadcrumbfontsize;
+  margin: 10px 0 0 0;
+  padding: 0 5px;
+  
+  @include element-shadow();
+  
+  a {
+    display: block;
+    float: left;
+    margin: 0; 
+    padding: 10px 8px;
+    font-weight: $font_semibold;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .separator {
+    display: block;
+    float: left;
+    padding: 10px 0;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background: url('../images/breadcrumb-separator.png') no-repeat center center;
+  }
+  
+  .page-title {
+    display: block;
+    float: left;
+    padding: 10px 0 10px 8px;
+    font-weight: $font_semibold;
+  }
+}

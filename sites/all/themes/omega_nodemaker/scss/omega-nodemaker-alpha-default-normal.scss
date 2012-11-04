@@ -1,0 +1,162 @@
+/* Include Default Variables & Mixins */
+@import "variables.scss";
+@import "mixins.scss";
+/* End Variables & Mixins */
+
+body {
+  
+}
+
+// make the toolbar not suckc
+#toolbar {
+
+  div.toolbar-menu {
+    // show the home button on larger screens
+    #toolbar-home {
+      display: block;
+    }
+    // show the user menu on larger screens
+    #toolbar-user {
+      display: block;
+    }
+
+    #toolbar-menu {
+      float: none;
+      display: block;
+      
+      li {
+        display: block;
+        float: none;
+        
+        a {
+          
+        }
+      }
+      
+    }
+  }
+}
+
+#zone-user-wrapper {
+  
+  .mobile-menu {
+    display: none;
+  }
+  
+  #block-system-user-menu {
+    display: block !important;
+    float: left;
+    margin-top: 0;
+  }
+  #block-search-form {
+    float: right;
+    display: block !important;
+    margin-top: 0;
+    
+    .form-item,
+    .form-actions {
+      //display: inline-block;
+      //*display: inline;
+      display: block;
+      float: left;
+      margin: 2px 0 0 0;
+      
+      input {
+        margin-bottom: 0;
+      }
+      
+      input.form-text {
+        
+        width: 200px;
+        height: 28px;
+        margin: 0 5px 0 0;
+        padding: 6px 8px;
+        font-weight: $font_semibold;
+        @include boxsizing();
+      }
+      
+      
+      .form-submit {
+        display: inline-block;
+        *display: inline;
+        float: none;
+        width: auto;
+      }
+    }
+    
+  }
+  #block-user-login {
+    display: block !important;
+    float: left;
+    margin-top: 0;
+    
+    
+    
+    .item-list {
+      
+      display: inline-block;
+      *display: inline;
+      float: none;
+      margin-top: 2px;
+      
+      ul {
+
+      }
+      
+    }
+    
+    .form-item,
+    .form-actions {
+      //display: inline-block;
+      //*display: inline;
+      display: block;
+      float: left;
+      margin: 2px 5px 0 0;
+      
+      input {
+        margin-bottom: 0;
+      }
+      
+      input.form-text {
+        
+        width: 150px;
+        height: 28px;
+        margin: 0;
+        padding: 6px 8px;
+        font-weight: $font_semibold;
+        @include boxsizing();
+      }
+      
+      
+      .form-submit {
+        display: inline-block;
+        *display: inline;
+        float: none;
+        width: auto;
+        //margin-right: 5px;
+      }
+    }
+  }
+}
+
+
+// menu overrides
+/* Specifically the block nm_core provides */
+#block-menu-block-nm-core-mobile-menu {
+  display: none !important;
+}
+
+#block-nm-core-nodemaker-nice-menus-main {
+  display: block; // was hidden on mobile, now we'll show it
+}
+
+#zone-footer-wrapper {
+  
+  #block-menu-block-nm-core-footer-menu {
+    display: block;
+    
+    ul.menu li {
+
+    }
+  }
+}

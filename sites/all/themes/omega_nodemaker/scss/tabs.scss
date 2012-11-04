@@ -1,0 +1,34 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains styles related to the local task menu(s)
+ */
+
+#primary-tabs,
+#primary-tabs li,
+#primary-tabs li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+#primary-tabs {
+  margin-bottom: 10px;
+  li {
+    a {
+      @include button();
+      margin-right: 5px;
+    }
+    &:last-child {
+      a {
+        margin-right: 0;
+      }
+    }
+  }
+}

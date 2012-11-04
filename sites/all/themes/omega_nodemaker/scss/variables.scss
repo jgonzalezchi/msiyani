@@ -1,0 +1,156 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the variables used throughout the entire NodeMaker
+ * suite of SCSS files. 
+ *
+ * You can achieve a very different look for your site simply by editing 
+ * the variables present on this page.
+ */
+
+
+
+
+
+// 'Advent Pro', sans-serif;
+//@import url(//fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300,500,600,700);
+// 'Open Sans', sans-serif;
+//@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+// 'Simonetta', cursive;
+//@import url(//fonts.googleapis.com/css?family=Simonetta:400,900);
+// 'Neuton', serif;
+//@import url(//fonts.googleapis.com/css?family=Neuton:200,300,400,700,800,400italic);
+
+$font_ultralight: 100;
+$font_light: 200;
+$font_book: 300;
+$font_normal: 400;
+$font_medium: 500;
+$font_semibold: 600;
+$font_bold: 700;
+$font_ultrabold: 800;
+
+// shadows
+$dark-shadow: rgba(0,0,0,0.9);
+$med-shadow: rgba(0,0,0,0.7);
+$light-shadow: rgba(0,0,0,0.5);
+$lightest-shadow: rgba(0,0,0,0.10);
+
+
+
+// breadcrumbs.scss
+$breadcrumbbgcolor: #EEE;
+$breadcrumbborder: 1px solid #CCC;
+$breadcrumbfontsize: 12px;
+
+// tables.scss
+$table-background-color: transparent;
+$table-border: 1px solid #AAA;
+$table-thead-background-color: #AAA;
+$table-thead-font-color: #FFF;
+$table-thead-border-bottom: 3px solid #CCC;
+$table-thead-border-right: 1px solid #BBB;
+$table-tr-background-color: #EEE;
+$table-tr-odd-background-color: #FFF;
+$table-tr-even-background-color: #EEE; 
+$table-td-border: 1px solid #AAA;
+
+
+$table-tfoot-background-color: #DDD;
+$table-tfoot-font-color: #000;
+$table-tfoot-border-top: 3px solid #AAA;
+
+
+$bodybgcolor: #FFF;
+$bodybgimage: url('../images/fabric.png');
+
+$defaultlinkcolor: #0678BE;
+$defaultlinkhovercolor: #999;
+
+$headerfont: 'Neuton', serif;
+$defaultheadercolor: #000;
+
+$defaultheaderlinkcolor: #0678BE;
+$defaultheaderlinkhovercolor: #999;
+
+
+
+$bodyfont: 'Open Sans', sans-serif;
+$altbodyfont: 'Trebuchet MS', Helvetica, Verdana, Arial, sans-serif;
+
+// mobile specific elements
+$mobilemenubg: #444;
+$tabletmenubg: transparent;
+
+// User Menu & Search
+$user_bar_bg_start: #FFF;
+$user_bar_bg_end: #CCC;
+$user_bar_menu_item_bg: #CCC;
+$user_bar_menu_item_color: #000;
+$user_bar_menu_item_bg_hover: #EEE;
+$user_bar_menu_item_color_hover: #CCC;
+
+
+
+// main menu
+// also see nicemenus.scss
+
+$main-menu-background-color: #EEE;
+$main-menu-border: 1px solid #CCC;
+
+$main-menu-item-background-color: #EEE;
+$main-menu-item-border: 1px solid #CCC;
+$main-menu-item-color: #888;
+$main-menu-item-hover-background-color: #FFF;
+$main-menu-item-hover-border: 1px solid #CCC;
+$main-menu-item-hover-color: #999;
+$main-menu-item-active-background-color: #FFF;
+$main-menu-item-active-border: 1px solid #CCC;
+$main-menu-item-active-color: #000;
+
+  // secondary menu
+  $secondary-menu-item-background-color: #EEE;
+  $secondary-menu-item-border: 1px solid #CCC;
+  $secondary-menu-item-color: #888;
+  $secondary-menu-item-hover-background-color: #FFF;
+  $secondary-menu-item-hover-border: 1px solid #CCC;
+  $secondary-menu-item-hover-color: #999;
+  $secondary-menu-item-active-background-color: #FFF;
+  $secondary-menu-item-active-border: 1px solid #CCC;
+  $secondary-menu-item-active-color: #000;
+  
+    // tertiary menu
+    $tertiary-menu-item-background-color: #EEE;
+    $tertiary-menu-item-border: 1px solid #CCC;
+    $tertiary-menu-item-color: #888;
+    $tertiary-menu-item-hover-background-color: #FFF;
+    $tertiary-menu-item-hover-border: 1px solid #CCC;
+    $tertiary-menu-item-hover-color: #999;
+    $tertiary-menu-item-active-background-color: #FFF;
+    $tertiary-menu-item-active-border: 1px solid #CCC;
+    $tertiary-menu-item-active-color: #000;
+
+// pager(s)
+$pager-link-color: #888;
+$pager-link-hover-color: #000;
+$pager-item-background-color: #FFF;
+$pager-item-border: 1px solid #CCC;
+
+// promotional banner
+$promobannerbg: #999;
+$promobannercolor: #FFF;
+$promobannerbuttonbg: #888;
+$promobannerbuttoncolor: #FFF;
+$promobannerbuttonborder: 1px solid #CCC;
+// footer
+$footerbg: #EEE;
+$footerborder: 5px solid #999;
+$footermenuheadercolor: #666;
+$footermenulinkcolor: #999;
+$footermenulinkcolorhover: #777;

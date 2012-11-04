@@ -1,0 +1,342 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This is the core file to include all default styles for all media types
+ * This global.css also serves as the mobile version. 
+ *
+ * All styles applied by this file are overwritten by the following files:
+ *  - omega-nodemaker-alpha-default.scss (applies to all media queries except mobile)
+ *  - omega-nodemaker-alpha-default-narrow.scss (applies to narrow media query and up)
+ *  - omega-nodemaker-alpha-default.scss (applies to normal media query and up)
+ *  - omega-nodemaker-alpha-default.scss (applies to wide media query and up)
+ *
+ * These files are used to overwrite layout and positioning based on the media query set 
+ * in the subtheme settings.
+ */
+ 
+// Include Default Variables & Mixins
+@import "variables.scss";
+@import "mixins.scss";
+// End Variables & Mixins
+
+// Include normalize.css
+@import "reset.scss";
+// include default element styles
+@import "elements.scss";
+// include default header element styles
+@import "headers.scss";
+// include default form styles
+@import "forms.scss";
+// include default table styles
+@import "tables.scss";
+// include default pager styles
+@import "pager.scss";
+// include button styles and mixins
+@import "buttons.scss";
+// include styles for drupal messages
+@import "messages.scss";
+// include styles for drupal breadcrumbs
+@import "breadcrumbs.scss";
+// include styles for drupal toolbar
+@import "toolbar.scss";
+// include styles for local tasks
+@import "tabs.scss";
+// include styles for nodes
+@import "node.scss";
+// include styles for nodes
+@import "comments.scss";
+// include styles for blocks
+@import "blocks.scss";
+// include styles for terms & term pages
+@import "taxonomy.scss";
+// include styles for nice_menus dropdown
+@import "menus.scss";
+// import nodemaker specific overrides last
+@import "nodemaker.scss";
+
+
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.form-submit {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  @include button();
+  
+}
+
+.zone {
+  margin: 0 10px;
+}
+
+
+
+
+
+
+#zone-user-wrapper {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  max-width: 100%;
+  
+  .mobile-menu {
+
+    a {
+      @include button();
+      margin-right: 5px;
+    }
+  }
+  
+  @include gradient($user_bar_bg_start, $user_bar_bg_end);
+  @include med-shadow();
+  padding: 5px 0;
+  border-top: 2px solid #999;
+  
+  #block-search-form {
+    display: none;
+    margin-top: 10px;
+  }
+  
+  #block-user-login {
+    display: none;
+    margin-top: 10px;
+    
+    .form-item input {
+      
+    }
+    
+    .block-title {
+      display: none;  
+    }
+    
+    label {
+      display: none;
+    }
+    
+    .item-list {
+      display: block;
+      float: right;
+  
+      ul li a {
+        margin-right: 5px;
+      }
+    }
+  }
+  
+  .form-item,
+  .form-actions {
+    display: block;
+    margin: 0 0 5px 0;
+    position: relative;
+    
+    input {
+      margin-bottom: 0;
+    }
+    
+    input.form-text {
+      position: relative;
+      width: 100%;
+      height: 42px;
+      margin: 0;
+      display: block;
+      padding: 10px;
+      
+      
+      font-weight: $font_semibold;
+      
+      @include boxsizing();
+    }
+    
+    
+    .form-submit {
+      display: block;
+      float: left;
+      width: auto;
+    }
+  }
+  
+  .form-actions {
+    
+  }
+  
+  
+  
+  #block-system-user-menu {
+    display: none;
+    margin-top: 10px;
+    
+    .block-title {
+      display: none;
+    }   
+  }
+  
+  // apply to all ul/li's in the user bar.
+  ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    
+    li {
+      position: relative;
+      list-style-type: none;  
+      display: inline-block;
+      *display: inline;
+      margin: 0;
+      padding: 0;
+      
+      a {
+
+        @include button();
+        //line-height: 16px;
+        &:hover {
+          
+        }
+      }
+    }
+  }
+}
+
+body.toolbar {
+  #zone-user-wrapper {
+    position: relative;
+  }
+}
+
+#zone-branding-wrapper {
+  margin-top: 10px;
+  .logo-img {
+    text-align: center;
+  }
+}
+
+
+
+#zone-footer-wrapper {
+  background-color: $footerbg;
+  border-top: $footerborder;
+  padding: 20px 0 40px 0;
+  font-size: 12px;
+  margin: 0;
+  margin-top: 40px;
+  
+  &:after {
+    
+  }
+  // defaults for footer elememnts
+  ul {
+    margin: 0;
+    padding: 0;
+    
+    li {
+      list-style-type: none;
+      list-style-image: none;
+      margin: 0;
+      padding: 0;
+      
+      a {
+        color: $footermenulinkcolor;
+        font-weight: $font_semibold;
+        text-decoration: none;
+        &:hover {
+          color: $footermenulinkcolorhover;
+          text-decoration: underline;
+        } 
+
+        &:active {
+          color: $footermenulinkcolorhover;
+        }
+      }
+    }
+  }
+  
+  
+  
+}
+
+
+
+// social connect block
+#block-nm-core-nm-core-social-links {
+  //float: right;
+  
+  h2.block-title {
+    @include h3();
+    //line-height: 30px;
+    margin-top: 0;
+    
+  }
+  
+  .item-list {
+    
+    ul {
+      
+      li {
+        display: block;
+        margin: 5px 0;
+        
+        a {
+          display: block;
+          background: #FFF;
+          border: 1px solid #CCC;
+          padding: 5px;
+          text-decoration: none;
+          
+          
+          -moz-transition: padding .15s ease-in;
+          -o-transition: padding .15s ease-in;
+          -webkit-transition: padding .15s ease-in;
+          transition: padding .15s ease-in;
+          
+          &:hover,
+          &:focus {
+            border: 1px solid #BBB;
+            text-decoration: none;
+            padding-left: 10px;
+          }
+          
+          img {
+            vertical-align: middle;
+          }
+          
+          .social-label {
+            @include h6();
+            font-weight: normal;
+            margin-left: 10px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.flexslider {
+  border: 0px;
+}
+
+html.touch {
+  .flex-direction-nav {
+    display: none;
+  }
+}

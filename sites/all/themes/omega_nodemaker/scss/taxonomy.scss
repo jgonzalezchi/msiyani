@@ -1,0 +1,37 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file has styles for taxonomy term listings and terms on nodes
+ */
+ 
+body.page-taxonomy-term {
+  
+  #block-system-main {
+    
+    .block-inner {
+      position: relative;
+      width: 100%;
+      
+      .term-nodes {
+        position: relative;
+      }
+      
+      .node {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        @include boxsizing();
+        
+        .node-content {
+          @include element-background();  
+        }
+      }
+    }
+  }
+}

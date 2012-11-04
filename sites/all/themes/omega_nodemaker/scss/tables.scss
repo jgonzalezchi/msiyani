@@ -1,0 +1,120 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * Table Styles
+ */
+
+table {
+  font-size: 12px;
+  background: $table-background-color;
+  border: $table-border;
+  width: 100%;
+  max-width: 100%;
+  
+  @include boxsizing();
+  margin-bottom: 20px;
+  
+  tr, tr.even, tr.odd {
+    background-color: $table-tr-background-color;
+    border: 0;
+    
+    border-bottom: $table-td-border;;
+    
+    td {
+      border: 0;
+      padding: 10px;
+      border-right: $table-td-border;
+      
+      a {
+        font-weight: $font_ultrabold;
+      }
+    }
+    
+    // tr's with odd class
+    &.odd {
+      background-color: $table-tr-odd-background-color;  
+    }
+    
+    // tr's with even class
+    &.even {
+      background-color: $table-tr-even-background-color;
+    }
+    
+  }
+  
+  thead {
+    background: $table-thead-background-color;
+    color: $table-thead-font-color;
+    
+    tr {
+      background-color: transparent;
+      border-bottom: $table-thead-border-bottom;
+      
+      td, th {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: $font_ultrabold;
+        padding: 10px;
+        border-bottom: 0;
+        border-right: $table-thead-border-right;
+        
+        a,
+        a:visited {
+          text-decoration: none;
+          color: $table-thead-font-color;
+        
+          &:hover {
+            text-decoration: underline;
+          }
+          
+        }
+        a.active {
+          color: #FFF;
+          
+        }
+      }
+    }
+  }
+  
+  tbody {
+    border: 0;
+  }
+  
+  tfoot {
+    background: $table-tfoot-background-color;
+    color: $table-tfoot-font-color;
+    tr {
+      background: transparent;
+      border-top: $table-tfoot-border-top;
+      td {
+        background: transparent;
+        font-weight: $font_ultrabold;
+      }
+    }
+  }
+}
+
+// forum table specifics
+#forum {
+  td {
+    div.name {
+      a {
+        @include h3();
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    div.description {
+      margin: 10px 0;
+    }
+  }
+}

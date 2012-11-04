@@ -1,0 +1,712 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles that are diretly related to node elements in Drupal
+ * These styles should be generic enough to apply on non-NodeMaker sites.
+ * 
+ * More specific node styles that may relate to NodeMaker specific pages/views
+ * can be likely found in nodemaker.scss
+ */
+
+#colorbox, #cboxOverlay, #cboxWrapper {
+  z-index: 10001;
+}
+body.page-imagecrop {
+  background: transparent;
+}
+#imagecrop-ui {
+  border: 0;
+}
+#imagecrop-crop-container {
+  img {
+    width: auto !important;
+    max-width: none !important;
+  }
+}
+#imagecrop-selection {
+  border: 0;  
+}
+#imagecrop-image {
+  width: auto !important;
+  height: auto !important;
+}
+#imagecrop-iframe {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 800px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+// node ADD page (node/add)
+dl.node-type-list {
+  @include element-background();
+  padding: 40px;
+}
+
+
+// include default background for nodes in the primary view for a page
+.node {
+  margin-bottom: 20px;
+  
+  .node-content {
+    @include element-background();  
+  }
+  
+  .node-comments #comment-form {
+    @include element-background();
+    margin-bottom: 40px;
+  }
+  
+}
+
+.node-river {
+  margin-top: 20px;
+}
+// node VIEW
+.node {
+  
+  // on the full node page, we add our background to the node content and comments wrapper
+  &.full-theme-view {
+        
+  }    
+
+  // headline image
+  .field-type-image,
+  .field-name-field-nm-headline-image {
+    a {
+      display: block;
+    }
+  }
+
+  // body field  
+  .field-type-text-with-summary,
+  .field-name-field-nm-body {
+    font-size: 14px;
+    
+    p {
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  // tags
+
+  
+    
+  .field-name-field-nm-tags,
+  .field-name-taxonomy-forums,
+  .field-name-field-nm-event-category,
+  .field-name-field-nm-announcement-category,
+  .field-name-field-nm-blog-category {
+    
+    .field-items {
+      display: inline;
+    }
+
+    .field-label {
+      display: inline;
+      font-size: 10px;
+      font-family: $altbodyfont;
+      font-weight: bold;
+      margin-top: 8px;
+
+      color: $defaultheaderlinkcolor;
+      
+      &:hover {
+        background: #F8F8F8;
+      }      
+    }
+    .field-item {
+      display: inline;
+      
+      a {
+        @include button();
+        margin-bottom: 5px;
+        font-size: 10px;
+        text-transform: lowercase;
+      }
+    }
+  }
+  
+  .share {
+    .category-term {
+      float: right;
+      
+      .field-item {
+        
+        &:last-child a {
+          margin-right: 0;
+        }
+      }
+      
+    }
+    .share-wrapper {
+      float: left;
+    }
+  }
+  
+  // submitted by information on posts
+  .submitted {
+    font-size: 10px;
+    color: #888;
+  }
+  
+  // node links
+  nav.links {
+    margin: 10px 0 0 0;
+    ul.links {
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        margin: 0;
+        padding: 0;
+        a {
+          @include button();
+        }
+      }
+    }
+  }
+}
+
+// node FORM
+.node-form {
+  .image-widget {
+    position: relative;
+    
+    .image-widget-data {
+      width: 100%;
+      display: block;
+      float: none;
+  
+      .form-submit {
+        display: block;
+        float: right;
+      }
+      
+      .file,
+      .file-size,
+      .colorbox-load {
+        font-size: 12px;
+      }
+      
+      .colorbox-load {
+        @include button();
+        display: block;
+        float: right;
+        margin-left: 5px;
+      }
+      
+      .form-item {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .field-type-image {
+    max-width: 100%;
+  }
+  
+  .file-remove-button {
+    background-color: #DA4F49;
+    background-image: -moz-linear-gradient(center top , #EE5F5B, #DA4F49);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);  
+    
+    &:hover {
+      background-color: #DA4F49;
+      background-image: -moz-linear-gradient(center top , #DA4F49, #DA4F49);
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+  }
+  
+  .image-preview {
+    float: none;
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin-bottom: 10px;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  label, 
+  legend {
+    font-weight: $font_ultrabold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    .field-edit-link {
+      font-size: 11px;
+      font-weight: $font_normal;
+      float: right;
+      line-height: 18px;
+    }
+  }
+  
+  .form-item {
+    @include element-background();
+    padding: 10px;
+    
+    .description {
+      font-size: 11px;
+      color: #888;
+      margin: 10px 0;
+    }
+    
+    &.form-type-radio,
+    &.form-type-checkbox {
+      @include reset-shadow();
+      border: 0;
+      margin-top: 0;
+      background: transparent;    
+      padding: 0;
+      
+      label {
+        font-size: 12px;
+        font-weight: $font_semibold;
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  .form-text {
+    
+    width: 100%;
+    height: 32px;
+    @include boxsizing();
+  }
+
+  .filter-wrapper {
+    margin-top: 20px;
+    @include element-background();
+    font-size: 11px;
+    position: relative;
+    
+    .form-item {
+      @include reset-shadow();
+      border: 0;
+      margin-top: 0;
+      background: transparent;
+      
+      label {
+        display: block;
+      }
+    }
+    
+    .filter-guidelines {
+      padding: 0;
+      font-size: 11px;
+      color: #888;
+      margin: 10px 0;
+      ul {
+        
+      }
+    }
+    
+    .filter-help {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0;
+    }
+  }
+  
+  // Main Vertical Tabs Styles
+  .vertical-tabs {
+    @include element-background();
+    margin-bottom: 40px;
+    position: relative;
+    
+    // vertical tabs menu
+    ul.vertical-tabs-list {
+      padding: 0;
+      
+      li.vertical-tab-button {
+        display: inline-block;
+        *display: inline;
+        list-style-type: none;
+        font-size: 14px;
+        margin: 0 5px 5px 0;
+        a {
+
+          @include button();
+
+          &:hover {
+            
+          }
+          &:active {
+            outline: 0;
+          }
+        }
+        span.summary {
+          font-size: 12px;
+          color: #CCC;
+          text-decoration: none;
+          display: none;
+        }
+        &:last-child {
+          border-bottom: 0;
+        }
+        &.selected {
+          border-right: 0;
+          
+          a {
+            background: #FFF;
+          }
+        }
+      }
+      
+    }
+    
+    // main vertical tabs content
+    .vertical-tabs-panes {
+      position: relative;
+      z-index: 100;
+      width: 100%;
+      position: relative;
+      
+      @include boxsizing();
+      
+      .vertical-tabs-pane {
+        display: block;        
+        position: relative;        
+        border: 1px solid #CCC;
+        padding: 10px 20px;
+        background: #FFF;
+        max-width: 100%;
+        
+        img {
+          height: auto;
+          max-width: 100%;
+        }
+        
+        @include boxsizing();
+        
+        .fieldset-wrapper {
+          max-width: 100%;  
+          width: 100%;
+        }
+        
+        &>legend {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  #edit-field-nm-attach-gallery {
+    .form-radios {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+  }
+  
+  .filefield-sources-list {
+    font-size: 12px;
+  }
+  
+  .tabledrag-toggle-weight-wrapper {
+    position: relative;
+    font-size: 12px;
+    float: right;
+    top: -24px;
+  }
+
+  .field-type-image {
+
+    .description {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+    
+    .form-item {
+      position: relative;
+    }
+
+    .image-preview {
+      position: absolute;
+      top: 0;
+      left: 0px;
+      width: 48px;
+      height: 48px;
+      border: 1px solid #CCC;
+    }
+    
+    .image-details {
+      display: block;
+      
+      
+      &.with-image {
+        display: none;
+      }
+      &.without-image {
+        
+      }
+    }
+    
+    .image-widget {
+      padding-left: 55px;
+      
+      &.has-no-image {
+        padding-left: 0;
+      }
+    }
+    
+    .image-widget-data {
+      position: relative;
+      width: auto;
+
+      .image-data,
+      .file-size,
+      .file-name,
+      .file-dimensions,
+      .file {
+        font-size: 11px;
+        
+        a {
+          font-weight: bold;
+        }
+      }
+      .image-data {
+        margin-bottom: 5px;
+        padding: 10px;
+        height: 28px;
+        line-height: 28px;
+        border: 1px solid #CCC;
+        background: #FFF; 
+        
+        .more-details {
+          float: right;
+        }
+      }
+      
+      .form-type-textfield {
+        margin: 0px 0px 5px 0px;
+        padding: 5px;
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+        background: none;
+        
+        input.form-text {
+          margin-bottom: 0;
+        }
+        .description {
+          margin-top: 2px;  
+        }
+        
+        label {
+          display: none;
+        }
+      }
+    }
+    .file-icon {
+      display: none;
+    }
+  }
+  
+  
+  
+  // for tabledrag/multiple file inputs
+  
+  .field-type-image {
+    .draggable{
+      .image-preview {
+        position: absolute;
+        top: 0;
+        left: 25px;
+        width: 48px;
+        height: 48px;
+        border: 1px solid #CCC;
+      }
+    }
+  }
+  table {
+    
+    &.tabledrag-processed {
+      border-width: 0;
+      
+      
+    }  
+    
+    .draggable {
+      position: relative;
+      padding: 0;
+      border-width: 0;
+      border: none;
+      
+      &.row-changed {
+        background-color: #FCF8E3;
+        
+        .image-data {
+          border-color: #FBEED5;
+        }
+      }
+      
+      .table-cell-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+      td {
+        border: none;
+      }
+      .tabledrag-hide {
+        width: 60px !important;
+        vertical-align: top;
+        
+        .form-item {
+          margin: 0;
+          padding: 5px;
+          box-shadow: none;
+          border: 0;
+          padding: 0;
+          background: none;
+          
+          select {
+            width: 100%;
+            margin: 0;
+          }
+        }
+      }
+      .image-widget {
+        padding-left: 80px;
+        
+        &.has-no-image {
+          padding-left: 0;
+        }
+      }
+    }
+    
+    a.tabledrag-handle {
+      z-index: 499;
+      position: relative;
+      float: left;
+      margin-left: -10px;
+
+    }
+    .tabledrag-changed {
+      display: none;
+    }
+  }
+}
+
+body.page-node-edit,
+body.page-node-revisions {
+  #region-content {
+    width: 100%;
+    @include boxsizing();
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+// custom displays for a mobile screen and for something large enough to render the vertical tabs
+// properly in the overlay... 
+
+@media all and (min-width: 980px) {
+  .node-form {
+      
+      // Main Vertical Tabs Styles
+    .vertical-tabs {
+      @include element-background();
+      margin-bottom: 40px;
+      position: relative;
+      
+      // vertical tabs menu
+      ul.vertical-tabs-list {
+        position: relative;
+        z-index: 101;
+        width: 25%;
+        float: left;
+        left: 1px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #CCC;
+        border-right: 0;
+        @include boxsizing();
+        
+        li.vertical-tab-button {
+          display: block;
+          list-style-type: none;
+          font-size: 14px;
+          border-bottom: 1px solid #CCC;
+          border-right: 1px solid #CCC;
+          margin: 0;
+          
+          a {
+            @include button-reset();
+            display: block;
+            padding: 20px 10px;
+            text-decoration: none;
+            background: #EEE;
+            &:hover {
+              
+            }
+            &:active {
+              outline: 0;
+            }
+          }
+          span.summary {
+            display: block;
+          }
+          &:last-child {
+            border-bottom: 0;
+          }
+          &.selected {
+            border-right: 0;
+            
+            a {
+              background: #FFF;
+            }
+          }
+        }
+        
+      }
+      
+      // main vertical tabs content
+      .vertical-tabs-panes {
+        //position: absolute;
+        //top: 0;
+        //right: 0;
+        //bottom: 0;
+        //left: 0;
+        max-width: 100%;
+        z-index: 100;
+        width: 100%;
+        position: relative;
+        
+        @include boxsizing();
+        
+        .vertical-tabs-pane {
+          display: block;
+          height: 100%;
+          max-width: 100% !important;
+          border: 1px solid #CCC;
+          padding: 20px 40px;
+          background: #FFF;
+          
+          
+          
+          @include boxsizing();
+          
+          &>legend {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

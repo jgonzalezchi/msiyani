@@ -1,0 +1,32 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains the basic styling for the drupal toolbar, and making 
+ * it suck less in mobile viewing.
+ */
+#toolbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10000; }
+  #toolbar div.toolbar-menu #toolbar-home {
+    display: none; }
+  #toolbar div.toolbar-menu #toolbar-user {
+    display: none; }
+  #toolbar div.toolbar-menu #toolbar-menu {
+    float: none;
+    display: block; }
+    #toolbar div.toolbar-menu #toolbar-menu li {
+      display: block; }
+  #toolbar div.toolbar-drawer #edit-shortcuts {
+    display: none; }

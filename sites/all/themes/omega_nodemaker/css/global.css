@@ -1,0 +1,4426 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This is the core file to include all default styles for all media types
+ * This global.css also serves as the mobile version. 
+ *
+ * All styles applied by this file are overwritten by the following files:
+ *  - omega-nodemaker-alpha-default.scss (applies to all media queries except mobile)
+ *  - omega-nodemaker-alpha-default-narrow.scss (applies to narrow media query and up)
+ *  - omega-nodemaker-alpha-default.scss (applies to normal media query and up)
+ *  - omega-nodemaker-alpha-default.scss (applies to wide media query and up)
+ *
+ * These files are used to overwrite layout and positioning based on the media query set 
+ * in the subtheme settings.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the variables used throughout the entire NodeMaker
+ * suite of SCSS files. 
+ *
+ * You can achieve a very different look for your site simply by editing 
+ * the variables present on this page.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains various mixins to be used on elements throughout the site.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles and mixins related to header fonts
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #0678be;
+    text-decoration: none; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      color: #999999; }
+    h1 a.active, h2 a.active, h3 a.active, h4 a.active, h5 a.active, h6 a.active {
+      color: black; }
+
+h1 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 38px;
+  line-height: 38px; }
+
+h1#page-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h2 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h3 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h5 {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h6 {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h2.node-title {
+  margin-top: 5px; }
+
+/* Basic button style for submit buttons and some links */
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE6/7/8/9 & FF3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
+ * Known issue: no IE6 support.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+/*
+ * Addresses margins handled incorrectly in IE6/7.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7.
+ * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Addresses style set to `bolder` in FF3+, S4/5, Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+/*
+ * Addresses styling not present in S5, Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses styling not present in IE6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+p,
+pre {
+  margin: 1em 0; }
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome.
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * Addresses CSS quotes not supported in IE6/7.
+ */
+q {
+  quotes: none; }
+
+/*
+ * Addresses `quotes` property not supported in S4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+small {
+  font-size: 75%; }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px; }
+
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE6/7/8/9, FF3.
+ * 2. Improves image quality when scaled in IE7.
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */ }
+
+/*
+ * Corrects overflow displayed oddly in IE9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7.
+ */
+form {
+  margin: 0; }
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9.
+ * 2. Corrects text not wrapping in FF3.
+ * 3. Corrects alignment displayed oddly in IE6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */ }
+
+/*
+ * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
+ * UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9.
+ * 2. Removes excess padding in IE8/9.
+ * 3. Removes excess padding in IE7.
+ *    Known issue: excess padding remains in IE6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in S5, Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in S5, Chrome (include `-moz`
+ *    to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Removes inner padding and border in FF3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This is the core file for styling on generic html elements
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the variables used throughout the entire NodeMaker
+ * suite of SCSS files. 
+ *
+ * You can achieve a very different look for your site simply by editing 
+ * the variables present on this page.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains various mixins to be used on elements throughout the site.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles and mixins related to header fonts
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #0678be;
+    text-decoration: none; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      color: #999999; }
+    h1 a.active, h2 a.active, h3 a.active, h4 a.active, h5 a.active, h6 a.active {
+      color: black; }
+
+h1 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 38px;
+  line-height: 38px; }
+
+h1#page-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h2 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h3 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h5 {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h6 {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h2.node-title {
+  margin-top: 5px; }
+
+/* Basic button style for submit buttons and some links */
+.clearfix:after {
+  font-size: 0; }
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  font-family: "Open Sans", sans-serif;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none; }
+  body #scroller {
+    background: white url("../images/fabric.png") repeat top left;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    padding: 0; }
+  body #wrapper {
+    overflow: auto;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  body #page {
+    z-index: 100 !important; }
+
+a,
+a:visited {
+  color: #0678be;
+  text-decoration: underline; }
+  a:hover,
+  a:visited:hover {
+    color: #999999;
+    text-decoration: none; }
+  a.active,
+  a:visited.active {
+    color: #0678be;
+    font-weight: 800; }
+
+a.button {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 10px 4px;
+  margin-bottom: 5px;
+  *margin-left: .3em;
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  *line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -ms-linear-gradient(top, white, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+  background-image: -o-linear-gradient(top, white, #e6e6e6);
+  background-image: linear-gradient(top, white, #e6e6e6);
+  background-image: -moz-linear-gradient(top, white, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  a.button:hover, a.button:active, a.button.active, a.button.disabled, a.button[disabled] {
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9; }
+  a.button:active, a.button.active {
+    background-color: #cccccc \9; }
+  a.button:first-child {
+    *margin-left: 0; }
+  a.button:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+    /* Buttons in IE7 don't get borders, so darken on hover */
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -ms-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear; }
+  a.button:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+  a.button.active, a.button:active {
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  a.button.disabled, a.button[disabled] {
+    cursor: default;
+    background-color: #e6e6e6;
+    background-image: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+
+blockquote {
+  display: block;
+  padding: 20px 40px;
+  margin: 10px 10px 20px 40px;
+  border-color: #999;
+  border-width: 1px 1px 1px 10px;
+  border-style: dashed;
+  border-left: 10px solid #999;
+  font-family: "Neuton", serif;
+  font-weight: 400;
+  font-style: italic;
+  background-color: #EEE;
+  font-size: 26px;
+  -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1); }
+  blockquote p {
+    margin-top: 0; }
+  blockquote:last-child {
+    margin-bottom: 0; }
+
+dl dt {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px;
+  background: #EEE;
+  margin-bottom: 0; }
+  dl dt a, dl dt a:visited {
+    color: #000;
+    background-color: #EEE;
+    display: block;
+    text-decoration: none;
+    padding: 20px 30px; }
+    dl dt a:hover, dl dt a:visited:hover {
+      background-color: #DDD;
+      color: #000; }
+dl dd {
+  padding: 20px 30px;
+  font-size: 12px;
+  margin: 0;
+  background: #FFF;
+  border: 1px dashed #CCC;
+  border-top: 0; }
+
+ul.action-links {
+  margin: 5px 0;
+  padding: 0; }
+  ul.action-links li {
+    list-style-type: none; }
+    ul.action-links li a {
+      display: inline-block;
+      *display: inline;
+      padding: 4px 10px 4px;
+      margin-bottom: 5px;
+      *margin-left: .3em;
+      margin-right: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      *line-height: 20px;
+      color: #333333;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #f5f5f5;
+      *background-color: #e6e6e6;
+      background-image: -ms-linear-gradient(top, white, #e6e6e6);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+      background-image: -o-linear-gradient(top, white, #e6e6e6);
+      background-image: linear-gradient(top, white, #e6e6e6);
+      background-image: -moz-linear-gradient(top, white, #e6e6e6);
+      background-repeat: repeat-x;
+      border: 1px solid #cccccc;
+      *border: 0;
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+      border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+      border-bottom-color: #b3b3b3;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      *zoom: 1;
+      -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+      margin-right: 5px; }
+      ul.action-links li a:hover, ul.action-links li a:active, ul.action-links li a.active, ul.action-links li a.disabled, ul.action-links li a[disabled] {
+        background-color: #e6e6e6;
+        *background-color: #d9d9d9; }
+      ul.action-links li a:active, ul.action-links li a.active {
+        background-color: #cccccc \9; }
+      ul.action-links li a:first-child {
+        *margin-left: 0; }
+      ul.action-links li a:hover {
+        color: #333333;
+        text-decoration: none;
+        background-color: #e6e6e6;
+        *background-color: #d9d9d9;
+        /* Buttons in IE7 don't get borders, so darken on hover */
+        background-position: 0 -15px;
+        -webkit-transition: background-position 0.1s linear;
+        -moz-transition: background-position 0.1s linear;
+        -ms-transition: background-position 0.1s linear;
+        -o-transition: background-position 0.1s linear;
+        transition: background-position 0.1s linear; }
+      ul.action-links li a:focus {
+        outline: thin dotted #333;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px; }
+      ul.action-links li a.active, ul.action-links li a:active {
+        background-color: #e6e6e6;
+        background-color: #d9d9d9 \9;
+        background-image: none;
+        outline: 0;
+        -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+      ul.action-links li a.disabled, ul.action-links li a[disabled] {
+        cursor: default;
+        background-color: #e6e6e6;
+        background-image: none;
+        opacity: 0.65;
+        filter: alpha(opacity=65);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
+
+div.more-link a {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 10px 4px;
+  margin-bottom: 5px;
+  *margin-left: .3em;
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  *line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -ms-linear-gradient(top, white, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+  background-image: -o-linear-gradient(top, white, #e6e6e6);
+  background-image: linear-gradient(top, white, #e6e6e6);
+  background-image: -moz-linear-gradient(top, white, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  div.more-link a:hover, div.more-link a:active, div.more-link a.active, div.more-link a.disabled, div.more-link a[disabled] {
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9; }
+  div.more-link a:active, div.more-link a.active {
+    background-color: #cccccc \9; }
+  div.more-link a:first-child {
+    *margin-left: 0; }
+  div.more-link a:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+    /* Buttons in IE7 don't get borders, so darken on hover */
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -ms-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear; }
+  div.more-link a:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+  div.more-link a.active, div.more-link a:active {
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  div.more-link a.disabled, div.more-link a[disabled] {
+    cursor: default;
+    background-color: #e6e6e6;
+    background-image: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles and mixins related to header fonts
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #0678be;
+    text-decoration: none; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      color: #999999; }
+    h1 a.active, h2 a.active, h3 a.active, h4 a.active, h5 a.active, h6 a.active {
+      color: black; }
+
+h1 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 38px;
+  line-height: 38px; }
+
+h1#page-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h2 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h3 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h5 {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h6 {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h2.node-title {
+  margin-top: 5px; }
+
+/* Include Default Variables & Mixins */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the variables used throughout the entire NodeMaker
+ * suite of SCSS files. 
+ *
+ * You can achieve a very different look for your site simply by editing 
+ * the variables present on this page.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains various mixins to be used on elements throughout the site.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles and mixins related to header fonts
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #0678be;
+    text-decoration: none; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      color: #999999; }
+    h1 a.active, h2 a.active, h3 a.active, h4 a.active, h5 a.active, h6 a.active {
+      color: black; }
+
+h1 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 38px;
+  line-height: 38px; }
+
+h1#page-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h2 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h3 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h5 {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h6 {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h2.node-title {
+  margin-top: 5px; }
+
+/* Basic button style for submit buttons and some links */
+/* End Variables & Mixins */
+form {
+  margin: 0; }
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+legend {
+  display: block;
+  font-size: 18px;
+  border: 0; }
+
+legend small {
+  font-size: 13.5px;
+  color: #999999; }
+
+label,
+input,
+button,
+select,
+textarea {
+  font-weight: normal;
+  line-height: 18px; }
+
+input,
+button,
+select,
+textarea {
+  font-family: "Open Sans", sans-serif; }
+
+label {
+  display: block;
+  margin-bottom: 5px; }
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  *display: inline;
+  height: 18px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555; }
+
+input,
+textarea {
+  width: 210px; }
+
+textarea {
+  height: auto; }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s; }
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); }
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 3px 0;
+  *margin-top: 0;
+  /* IE7 */
+  line-height: normal;
+  cursor: pointer; }
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto; }
+
+.uneditable-textarea {
+  width: auto;
+  height: auto; }
+
+select,
+input[type="file"] {
+  height: 28px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+  line-height: 28px; }
+
+select {
+  width: 220px;
+  border: 1px solid #bbb; }
+
+select[multiple],
+select[size] {
+  height: auto; }
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
+.radio,
+.checkbox {
+  min-height: 18px;
+  padding-left: 18px; }
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px; }
+
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  padding-top: 5px; }
+
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle; }
+
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px; }
+
+.input-mini {
+  width: 60px; }
+
+.input-small {
+  width: 90px; }
+
+.input-medium {
+  width: 150px; }
+
+.input-large {
+  width: 210px; }
+
+.input-xlarge {
+  width: 270px; }
+
+.input-xxlarge {
+  width: 530px; }
+
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"],
+.uneditable-input[class*="span"],
+.row-fluid input[class*="span"],
+.row-fluid select[class*="span"],
+.row-fluid textarea[class*="span"],
+.row-fluid .uneditable-input[class*="span"] {
+  float: none;
+  margin-left: 0; }
+
+.input-append input[class*="span"],
+.input-append .uneditable-input[class*="span"],
+.input-prepend input[class*="span"],
+.input-prepend .uneditable-input[class*="span"],
+.row-fluid .input-prepend [class*="span"],
+.row-fluid .input-append [class*="span"] {
+  display: inline-block; }
+
+input,
+textarea,
+.uneditable-input {
+  margin-left: 0; }
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  border-color: #ddd; }
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent; }
+
+#plup-list li {
+  width: 180px;
+  height: 265px;
+  position: relative; }
+  #plup-list li .plup-thumb-wrapper {
+    width: 180px;
+    height: 180px; }
+  #plup-list li input.form-text {
+    top: 0;
+    margin: 10px 5px 0 5px;
+    height: 28px !important;
+    width: 170px !important;
+    font-size: 14px; }
+  #plup-list li .plup-remove-item {
+    position: absolute;
+    top: 5px;
+    right: 5px; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * Table Styles
+ */
+table {
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid #aaaaaa;
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  margin-bottom: 20px; }
+  table tr, table tr.even, table tr.odd {
+    background-color: #eeeeee;
+    border: 0;
+    border-bottom: 1px solid #aaaaaa; }
+    table tr td, table tr.even td, table tr.odd td {
+      border: 0;
+      padding: 10px;
+      border-right: 1px solid #aaaaaa; }
+      table tr td a, table tr.even td a, table tr.odd td a {
+        font-weight: 800; }
+    table tr.odd, table tr.even.odd, table tr.odd.odd {
+      background-color: white; }
+    table tr.even, table tr.even.even, table tr.odd.even {
+      background-color: #eeeeee; }
+  table thead {
+    background: #aaaaaa;
+    color: white; }
+    table thead tr {
+      background-color: transparent;
+      border-bottom: 3px solid #cccccc; }
+      table thead tr td, table thead tr th {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 800;
+        padding: 10px;
+        border-bottom: 0;
+        border-right: 1px solid #bbbbbb; }
+        table thead tr td a,
+        table thead tr td a:visited, table thead tr th a,
+        table thead tr th a:visited {
+          text-decoration: none;
+          color: white; }
+          table thead tr td a:hover,
+          table thead tr td a:visited:hover, table thead tr th a:hover,
+          table thead tr th a:visited:hover {
+            text-decoration: underline; }
+        table thead tr td a.active, table thead tr th a.active {
+          color: #FFF; }
+  table tbody {
+    border: 0; }
+  table tfoot {
+    background: #dddddd;
+    color: black; }
+    table tfoot tr {
+      background: transparent;
+      border-top: 3px solid #aaaaaa; }
+      table tfoot tr td {
+        background: transparent;
+        font-weight: 800; }
+
+#forum td div.name a {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration: none; }
+  #forum td div.name a:hover {
+    text-decoration: underline; }
+#forum td div.description {
+  margin: 10px 0; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains pager styles for default pager, views pagers, etc.
+ */
+ul.pager,
+.item-list ul.pager {
+  font-size: 12px;
+  margin: 10px 0; }
+  ul.pager li,
+  .item-list ul.pager li {
+    display: inline-block;
+    *display: inline;
+    margin: 0 2px;
+    padding: 0; }
+    ul.pager li a,
+    .item-list ul.pager li a {
+      margin: 0;
+      padding: 5px 10px;
+      background-color: white;
+      border: 1px solid #cccccc;
+      text-decoration: none; }
+    ul.pager li.pager-current,
+    .item-list ul.pager li.pager-current {
+      margin: 0 2px;
+      padding: 5px 10px;
+      background-color: white;
+      border: 1px solid #cccccc; }
+    ul.pager li:first-child,
+    .item-list ul.pager li:first-child {
+      margin-left: 0; }
+    ul.pager li:last-child,
+    .item-list ul.pager li:last-child {
+      margin-right: 0; }
+
+/* Include Default Variables & Mixins */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the variables used throughout the entire NodeMaker
+ * suite of SCSS files. 
+ *
+ * You can achieve a very different look for your site simply by editing 
+ * the variables present on this page.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains various mixins to be used on elements throughout the site.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles and mixins related to header fonts
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #0678be;
+    text-decoration: none; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      color: #999999; }
+    h1 a.active, h2 a.active, h3 a.active, h4 a.active, h5 a.active, h6 a.active {
+      color: black; }
+
+h1 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 38px;
+  line-height: 38px; }
+
+h1#page-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h2 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h3 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h5 {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h6 {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h2.node-title {
+  margin-top: 5px; }
+
+/* Basic button style for submit buttons and some links */
+/* End Variables & Mixins */
+/* Include Default Variables & Mixins */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the variables used throughout the entire NodeMaker
+ * suite of SCSS files. 
+ *
+ * You can achieve a very different look for your site simply by editing 
+ * the variables present on this page.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains various mixins to be used on elements throughout the site.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles and mixins related to header fonts
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #0678be;
+    text-decoration: none; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      color: #999999; }
+    h1 a.active, h2 a.active, h3 a.active, h4 a.active, h5 a.active, h6 a.active {
+      color: black; }
+
+h1 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 38px;
+  line-height: 38px; }
+
+h1#page-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h2 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h3 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h5 {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h6 {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h2.node-title {
+  margin-top: 5px; }
+
+/* Basic button style for submit buttons and some links */
+/* End Variables & Mixins */
+/* Form elements */
+/* Messages */
+div.messages {
+  font-size: 14px;
+  padding: 10px;
+  border-width: 0;
+  background-image: none;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px; }
+  div.messages ul {
+    margin: 0 0 0 10px; }
+    div.messages ul li {
+      margin-bottom: 10px;
+      list-style-type: none; }
+      div.messages ul li:last-child {
+        margin-bottom: 0; }
+  div.messages em {
+    font-weight: 600; }
+
+div.status {
+  background-color: #DFF0D8;
+  color: #468847;
+  border-color: #D6E9C6; }
+
+div.warning {
+  background-color: #FCF8E3;
+  color: #C09853;
+  border-color: #FBEED5; }
+
+div.error {
+  background-color: #F2DEDE;
+  color: #B94A48;
+  border-color: #EED3D7; }
+
+div.workbench-info-block {
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 2px solid #CCC;
+  background-image: url("../i/stripe-pattern.png");
+  background-repeat: repeat;
+  background-position: top left;
+  padding: 20px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px; }
+  div.workbench-info-block em {
+    font-weight: 600; }
+  div.workbench-info-block a {
+    font-weight: normal;
+    font-style: normal; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file provides default styles for the Drupal breadcrumb.
+ */
+#breadcrumb {
+  display: none;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 10px 0 0 0;
+  padding: 0 5px;
+  -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1); }
+  #breadcrumb a {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 10px 8px;
+    font-weight: 600;
+    text-decoration: none; }
+    #breadcrumb a:hover {
+      text-decoration: underline; }
+  #breadcrumb .separator {
+    display: block;
+    float: left;
+    padding: 10px 0;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background: url("../images/breadcrumb-separator.png") no-repeat center center; }
+  #breadcrumb .page-title {
+    display: block;
+    float: left;
+    padding: 10px 0 10px 8px;
+    font-weight: 600; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains the basic styling for the drupal toolbar, and making 
+ * it suck less in mobile viewing.
+ */
+html.overlay-opened #toolbar {
+  z-index: 0; }
+html.overlay-opened #zone-user-wrapper {
+  z-index: 1; }
+
+#overlay-container {
+  top: 0px !important;
+  z-index: 9999; }
+
+#toolbar {
+  position: relative;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10000; }
+  #toolbar div.toolbar-menu #toolbar-home {
+    display: none; }
+  #toolbar div.toolbar-menu #toolbar-user {
+    display: none; }
+  #toolbar div.toolbar-menu #toolbar-menu {
+    float: none;
+    display: block; }
+    #toolbar div.toolbar-menu #toolbar-menu li {
+      display: block; }
+  #toolbar div.toolbar-drawer #edit-shortcuts {
+    display: none; }
+
+/**
+ *
+ * Pull down styles
+ *
+ */
+#pullDown, #pullUp {
+  background: #fff;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 14px;
+  color: #888;
+  z-index: 0; }
+
+#pullDown .pullDownIcon, #pullUp .pullUpIcon {
+  display: block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: url("../images/pull-icon@2x.png") 0 0 no-repeat;
+  -webkit-background-size: 40px 80px;
+  background-size: 40px 80px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 250ms; }
+
+#pullDown .pullDownIcon {
+  -webkit-transform: rotate(0deg) translateZ(0); }
+
+#pullUp .pullUpIcon {
+  -webkit-transform: rotate(-180deg) translateZ(0); }
+
+#pullDown.flip .pullDownIcon {
+  -webkit-transform: rotate(-180deg) translateZ(0); }
+
+#pullUp.flip .pullUpIcon {
+  -webkit-transform: rotate(0deg) translateZ(0); }
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+  background-position: 0 100%;
+  -webkit-transform: rotate(0deg) translateZ(0);
+  -webkit-transition-duration: 0ms;
+  -webkit-animation-name: loading;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear; }
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg) translateZ(0); }
+
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0); } }
+
+.no-touch body #pullDown, .no-touch body #pullUp {
+  display: none; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains styles related to the local task menu(s)
+ */
+#primary-tabs,
+#primary-tabs li,
+#primary-tabs li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent; }
+
+#primary-tabs {
+  margin-bottom: 10px; }
+  #primary-tabs li a {
+    display: inline-block;
+    *display: inline;
+    padding: 4px 10px 4px;
+    margin-bottom: 5px;
+    *margin-left: .3em;
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    *line-height: 20px;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, white, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+    background-image: -o-linear-gradient(top, white, #e6e6e6);
+    background-image: linear-gradient(top, white, #e6e6e6);
+    background-image: -moz-linear-gradient(top, white, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #cccccc;
+    *border: 0;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    *zoom: 1;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-right: 5px; }
+    #primary-tabs li a:hover, #primary-tabs li a:active, #primary-tabs li a.active, #primary-tabs li a.disabled, #primary-tabs li a[disabled] {
+      background-color: #e6e6e6;
+      *background-color: #d9d9d9; }
+    #primary-tabs li a:active, #primary-tabs li a.active {
+      background-color: #cccccc \9; }
+    #primary-tabs li a:first-child {
+      *margin-left: 0; }
+    #primary-tabs li a:hover {
+      color: #333333;
+      text-decoration: none;
+      background-color: #e6e6e6;
+      *background-color: #d9d9d9;
+      /* Buttons in IE7 don't get borders, so darken on hover */
+      background-position: 0 -15px;
+      -webkit-transition: background-position 0.1s linear;
+      -moz-transition: background-position 0.1s linear;
+      -ms-transition: background-position 0.1s linear;
+      -o-transition: background-position 0.1s linear;
+      transition: background-position 0.1s linear; }
+    #primary-tabs li a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+    #primary-tabs li a.active, #primary-tabs li a:active {
+      background-color: #e6e6e6;
+      background-color: #d9d9d9 \9;
+      background-image: none;
+      outline: 0;
+      -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+    #primary-tabs li a.disabled, #primary-tabs li a[disabled] {
+      cursor: default;
+      background-color: #e6e6e6;
+      background-image: none;
+      opacity: 0.65;
+      filter: alpha(opacity=65);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+  #primary-tabs li:last-child a {
+    margin-right: 0; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles that are diretly related to node elements in Drupal
+ * These styles should be generic enough to apply on non-NodeMaker sites.
+ * 
+ * More specific node styles that may relate to NodeMaker specific pages/views
+ * can be likely found in nodemaker.scss
+ */
+#colorbox, #cboxOverlay, #cboxWrapper {
+  z-index: 10001; }
+
+body.page-imagecrop {
+  background: transparent; }
+
+#imagecrop-ui {
+  border: 0; }
+
+#imagecrop-crop-container img {
+  width: auto !important;
+  max-width: none !important; }
+
+#imagecrop-selection {
+  border: 0; }
+
+#imagecrop-image {
+  width: auto !important;
+  height: auto !important; }
+
+#imagecrop-iframe {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 800px;
+  overflow-x: auto;
+  overflow-y: auto; }
+
+dl.node-type-list {
+  border: 1px solid #DDD;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  padding: 40px; }
+
+.node {
+  margin-bottom: 20px; }
+  .node .node-content {
+    border: 1px solid #DDD;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1); }
+  .node .node-comments #comment-form {
+    border: 1px solid #DDD;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; }
+
+.node-river {
+  margin-top: 20px; }
+
+.node .field-type-image a,
+.node .field-name-field-nm-headline-image a {
+  display: block; }
+.node .field-type-text-with-summary,
+.node .field-name-field-nm-body {
+  font-size: 14px; }
+  .node .field-type-text-with-summary p:last-child,
+  .node .field-name-field-nm-body p:last-child {
+    margin-bottom: 0; }
+.node .field-name-field-nm-tags .field-items,
+.node .field-name-taxonomy-forums .field-items,
+.node .field-name-field-nm-event-category .field-items,
+.node .field-name-field-nm-announcement-category .field-items,
+.node .field-name-field-nm-blog-category .field-items {
+  display: inline; }
+.node .field-name-field-nm-tags .field-label,
+.node .field-name-taxonomy-forums .field-label,
+.node .field-name-field-nm-event-category .field-label,
+.node .field-name-field-nm-announcement-category .field-label,
+.node .field-name-field-nm-blog-category .field-label {
+  display: inline;
+  font-size: 10px;
+  font-family: "Trebuchet MS", Helvetica, Verdana, Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #0678be; }
+  .node .field-name-field-nm-tags .field-label:hover,
+  .node .field-name-taxonomy-forums .field-label:hover,
+  .node .field-name-field-nm-event-category .field-label:hover,
+  .node .field-name-field-nm-announcement-category .field-label:hover,
+  .node .field-name-field-nm-blog-category .field-label:hover {
+    background: #F8F8F8; }
+.node .field-name-field-nm-tags .field-item,
+.node .field-name-taxonomy-forums .field-item,
+.node .field-name-field-nm-event-category .field-item,
+.node .field-name-field-nm-announcement-category .field-item,
+.node .field-name-field-nm-blog-category .field-item {
+  display: inline; }
+  .node .field-name-field-nm-tags .field-item a,
+  .node .field-name-taxonomy-forums .field-item a,
+  .node .field-name-field-nm-event-category .field-item a,
+  .node .field-name-field-nm-announcement-category .field-item a,
+  .node .field-name-field-nm-blog-category .field-item a {
+    display: inline-block;
+    *display: inline;
+    padding: 4px 10px 4px;
+    margin-bottom: 5px;
+    *margin-left: .3em;
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    *line-height: 20px;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, white, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+    background-image: -o-linear-gradient(top, white, #e6e6e6);
+    background-image: linear-gradient(top, white, #e6e6e6);
+    background-image: -moz-linear-gradient(top, white, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #cccccc;
+    *border: 0;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    *zoom: 1;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 5px;
+    font-size: 10px;
+    text-transform: lowercase; }
+    .node .field-name-field-nm-tags .field-item a:hover, .node .field-name-field-nm-tags .field-item a:active, .node .field-name-field-nm-tags .field-item a.active, .node .field-name-field-nm-tags .field-item a.disabled, .node .field-name-field-nm-tags .field-item a[disabled],
+    .node .field-name-taxonomy-forums .field-item a:hover,
+    .node .field-name-taxonomy-forums .field-item a:active,
+    .node .field-name-taxonomy-forums .field-item a.active,
+    .node .field-name-taxonomy-forums .field-item a.disabled,
+    .node .field-name-taxonomy-forums .field-item a[disabled],
+    .node .field-name-field-nm-event-category .field-item a:hover,
+    .node .field-name-field-nm-event-category .field-item a:active,
+    .node .field-name-field-nm-event-category .field-item a.active,
+    .node .field-name-field-nm-event-category .field-item a.disabled,
+    .node .field-name-field-nm-event-category .field-item a[disabled],
+    .node .field-name-field-nm-announcement-category .field-item a:hover,
+    .node .field-name-field-nm-announcement-category .field-item a:active,
+    .node .field-name-field-nm-announcement-category .field-item a.active,
+    .node .field-name-field-nm-announcement-category .field-item a.disabled,
+    .node .field-name-field-nm-announcement-category .field-item a[disabled],
+    .node .field-name-field-nm-blog-category .field-item a:hover,
+    .node .field-name-field-nm-blog-category .field-item a:active,
+    .node .field-name-field-nm-blog-category .field-item a.active,
+    .node .field-name-field-nm-blog-category .field-item a.disabled,
+    .node .field-name-field-nm-blog-category .field-item a[disabled] {
+      background-color: #e6e6e6;
+      *background-color: #d9d9d9; }
+    .node .field-name-field-nm-tags .field-item a:active, .node .field-name-field-nm-tags .field-item a.active,
+    .node .field-name-taxonomy-forums .field-item a:active,
+    .node .field-name-taxonomy-forums .field-item a.active,
+    .node .field-name-field-nm-event-category .field-item a:active,
+    .node .field-name-field-nm-event-category .field-item a.active,
+    .node .field-name-field-nm-announcement-category .field-item a:active,
+    .node .field-name-field-nm-announcement-category .field-item a.active,
+    .node .field-name-field-nm-blog-category .field-item a:active,
+    .node .field-name-field-nm-blog-category .field-item a.active {
+      background-color: #cccccc \9; }
+    .node .field-name-field-nm-tags .field-item a:first-child,
+    .node .field-name-taxonomy-forums .field-item a:first-child,
+    .node .field-name-field-nm-event-category .field-item a:first-child,
+    .node .field-name-field-nm-announcement-category .field-item a:first-child,
+    .node .field-name-field-nm-blog-category .field-item a:first-child {
+      *margin-left: 0; }
+    .node .field-name-field-nm-tags .field-item a:hover,
+    .node .field-name-taxonomy-forums .field-item a:hover,
+    .node .field-name-field-nm-event-category .field-item a:hover,
+    .node .field-name-field-nm-announcement-category .field-item a:hover,
+    .node .field-name-field-nm-blog-category .field-item a:hover {
+      color: #333333;
+      text-decoration: none;
+      background-color: #e6e6e6;
+      *background-color: #d9d9d9;
+      /* Buttons in IE7 don't get borders, so darken on hover */
+      background-position: 0 -15px;
+      -webkit-transition: background-position 0.1s linear;
+      -moz-transition: background-position 0.1s linear;
+      -ms-transition: background-position 0.1s linear;
+      -o-transition: background-position 0.1s linear;
+      transition: background-position 0.1s linear; }
+    .node .field-name-field-nm-tags .field-item a:focus,
+    .node .field-name-taxonomy-forums .field-item a:focus,
+    .node .field-name-field-nm-event-category .field-item a:focus,
+    .node .field-name-field-nm-announcement-category .field-item a:focus,
+    .node .field-name-field-nm-blog-category .field-item a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+    .node .field-name-field-nm-tags .field-item a.active, .node .field-name-field-nm-tags .field-item a:active,
+    .node .field-name-taxonomy-forums .field-item a.active,
+    .node .field-name-taxonomy-forums .field-item a:active,
+    .node .field-name-field-nm-event-category .field-item a.active,
+    .node .field-name-field-nm-event-category .field-item a:active,
+    .node .field-name-field-nm-announcement-category .field-item a.active,
+    .node .field-name-field-nm-announcement-category .field-item a:active,
+    .node .field-name-field-nm-blog-category .field-item a.active,
+    .node .field-name-field-nm-blog-category .field-item a:active {
+      background-color: #e6e6e6;
+      background-color: #d9d9d9 \9;
+      background-image: none;
+      outline: 0;
+      -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+    .node .field-name-field-nm-tags .field-item a.disabled, .node .field-name-field-nm-tags .field-item a[disabled],
+    .node .field-name-taxonomy-forums .field-item a.disabled,
+    .node .field-name-taxonomy-forums .field-item a[disabled],
+    .node .field-name-field-nm-event-category .field-item a.disabled,
+    .node .field-name-field-nm-event-category .field-item a[disabled],
+    .node .field-name-field-nm-announcement-category .field-item a.disabled,
+    .node .field-name-field-nm-announcement-category .field-item a[disabled],
+    .node .field-name-field-nm-blog-category .field-item a.disabled,
+    .node .field-name-field-nm-blog-category .field-item a[disabled] {
+      cursor: default;
+      background-color: #e6e6e6;
+      background-image: none;
+      opacity: 0.65;
+      filter: alpha(opacity=65);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+.node .share .category-term {
+  float: right; }
+  .node .share .category-term .field-item:last-child a {
+    margin-right: 0; }
+.node .share .share-wrapper {
+  float: left; }
+.node .submitted {
+  font-size: 10px;
+  color: #888; }
+.node nav.links {
+  margin: 10px 0 0 0; }
+  .node nav.links ul.links {
+    font-size: 12px;
+    padding: 0;
+    margin: 0; }
+    .node nav.links ul.links li {
+      margin: 0;
+      padding: 0; }
+      .node nav.links ul.links li a {
+        display: inline-block;
+        *display: inline;
+        padding: 4px 10px 4px;
+        margin-bottom: 5px;
+        *margin-left: .3em;
+        margin-right: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        *line-height: 20px;
+        color: #333333;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        *background-color: #e6e6e6;
+        background-image: -ms-linear-gradient(top, white, #e6e6e6);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+        background-image: -o-linear-gradient(top, white, #e6e6e6);
+        background-image: linear-gradient(top, white, #e6e6e6);
+        background-image: -moz-linear-gradient(top, white, #e6e6e6);
+        background-repeat: repeat-x;
+        border: 1px solid #cccccc;
+        *border: 0;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+        border-bottom-color: #b3b3b3;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        *zoom: 1;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+        .node nav.links ul.links li a:hover, .node nav.links ul.links li a:active, .node nav.links ul.links li a.active, .node nav.links ul.links li a.disabled, .node nav.links ul.links li a[disabled] {
+          background-color: #e6e6e6;
+          *background-color: #d9d9d9; }
+        .node nav.links ul.links li a:active, .node nav.links ul.links li a.active {
+          background-color: #cccccc \9; }
+        .node nav.links ul.links li a:first-child {
+          *margin-left: 0; }
+        .node nav.links ul.links li a:hover {
+          color: #333333;
+          text-decoration: none;
+          background-color: #e6e6e6;
+          *background-color: #d9d9d9;
+          /* Buttons in IE7 don't get borders, so darken on hover */
+          background-position: 0 -15px;
+          -webkit-transition: background-position 0.1s linear;
+          -moz-transition: background-position 0.1s linear;
+          -ms-transition: background-position 0.1s linear;
+          -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear; }
+        .node nav.links ul.links li a:focus {
+          outline: thin dotted #333;
+          outline: 5px auto -webkit-focus-ring-color;
+          outline-offset: -2px; }
+        .node nav.links ul.links li a.active, .node nav.links ul.links li a:active {
+          background-color: #e6e6e6;
+          background-color: #d9d9d9 \9;
+          background-image: none;
+          outline: 0;
+          -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+        .node nav.links ul.links li a.disabled, .node nav.links ul.links li a[disabled] {
+          cursor: default;
+          background-color: #e6e6e6;
+          background-image: none;
+          opacity: 0.65;
+          filter: alpha(opacity=65);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none; }
+
+.node-form .image-widget {
+  position: relative; }
+  .node-form .image-widget .image-widget-data {
+    width: 100%;
+    display: block;
+    float: none; }
+    .node-form .image-widget .image-widget-data .form-submit {
+      display: block;
+      float: right; }
+    .node-form .image-widget .image-widget-data .file,
+    .node-form .image-widget .image-widget-data .file-size,
+    .node-form .image-widget .image-widget-data .colorbox-load {
+      font-size: 12px; }
+    .node-form .image-widget .image-widget-data .colorbox-load {
+      display: inline-block;
+      *display: inline;
+      padding: 4px 10px 4px;
+      margin-bottom: 5px;
+      *margin-left: .3em;
+      margin-right: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      *line-height: 20px;
+      color: #333333;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #f5f5f5;
+      *background-color: #e6e6e6;
+      background-image: -ms-linear-gradient(top, white, #e6e6e6);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+      background-image: -o-linear-gradient(top, white, #e6e6e6);
+      background-image: linear-gradient(top, white, #e6e6e6);
+      background-image: -moz-linear-gradient(top, white, #e6e6e6);
+      background-repeat: repeat-x;
+      border: 1px solid #cccccc;
+      *border: 0;
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+      border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+      border-bottom-color: #b3b3b3;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      *zoom: 1;
+      -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+      display: block;
+      float: right;
+      margin-left: 5px; }
+      .node-form .image-widget .image-widget-data .colorbox-load:hover, .node-form .image-widget .image-widget-data .colorbox-load:active, .node-form .image-widget .image-widget-data .colorbox-load.active, .node-form .image-widget .image-widget-data .colorbox-load.disabled, .node-form .image-widget .image-widget-data .colorbox-load[disabled] {
+        background-color: #e6e6e6;
+        *background-color: #d9d9d9; }
+      .node-form .image-widget .image-widget-data .colorbox-load:active, .node-form .image-widget .image-widget-data .colorbox-load.active {
+        background-color: #cccccc \9; }
+      .node-form .image-widget .image-widget-data .colorbox-load:first-child {
+        *margin-left: 0; }
+      .node-form .image-widget .image-widget-data .colorbox-load:hover {
+        color: #333333;
+        text-decoration: none;
+        background-color: #e6e6e6;
+        *background-color: #d9d9d9;
+        /* Buttons in IE7 don't get borders, so darken on hover */
+        background-position: 0 -15px;
+        -webkit-transition: background-position 0.1s linear;
+        -moz-transition: background-position 0.1s linear;
+        -ms-transition: background-position 0.1s linear;
+        -o-transition: background-position 0.1s linear;
+        transition: background-position 0.1s linear; }
+      .node-form .image-widget .image-widget-data .colorbox-load:focus {
+        outline: thin dotted #333;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px; }
+      .node-form .image-widget .image-widget-data .colorbox-load.active, .node-form .image-widget .image-widget-data .colorbox-load:active {
+        background-color: #e6e6e6;
+        background-color: #d9d9d9 \9;
+        background-image: none;
+        outline: 0;
+        -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+      .node-form .image-widget .image-widget-data .colorbox-load.disabled, .node-form .image-widget .image-widget-data .colorbox-load[disabled] {
+        cursor: default;
+        background-color: #e6e6e6;
+        background-image: none;
+        opacity: 0.65;
+        filter: alpha(opacity=65);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
+    .node-form .image-widget .image-widget-data .form-item {
+      margin-bottom: 20px; }
+.node-form .field-type-image {
+  max-width: 100%; }
+.node-form .file-remove-button {
+  background-color: #DA4F49;
+  background-image: -moz-linear-gradient(center top, #ee5f5b, #da4f49);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+  .node-form .file-remove-button:hover {
+    background-color: #DA4F49;
+    background-image: -moz-linear-gradient(center top, #da4f49, #da4f49);
+    color: #FFFFFF;
+    text-decoration: none; }
+.node-form .image-preview {
+  float: none;
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin-bottom: 10px; }
+  .node-form .image-preview img {
+    max-width: 100%;
+    height: auto; }
+.node-form label,
+.node-form legend {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 5px; }
+  .node-form label .field-edit-link,
+  .node-form legend .field-edit-link {
+    font-size: 11px;
+    font-weight: 400;
+    float: right;
+    line-height: 18px; }
+.node-form .form-item {
+  border: 1px solid #DDD;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px; }
+  .node-form .form-item .description {
+    font-size: 11px;
+    color: #888;
+    margin: 10px 0; }
+  .node-form .form-item.form-type-radio, .node-form .form-item.form-type-checkbox {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    margin-top: 0;
+    background: transparent;
+    padding: 0; }
+    .node-form .form-item.form-type-radio label, .node-form .form-item.form-type-checkbox label {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 0; }
+.node-form .form-text {
+  width: 100%;
+  height: 32px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
+.node-form .filter-wrapper {
+  margin-top: 20px;
+  border: 1px solid #DDD;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  font-size: 11px;
+  position: relative; }
+  .node-form .filter-wrapper .form-item {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    margin-top: 0;
+    background: transparent; }
+    .node-form .filter-wrapper .form-item label {
+      display: block; }
+  .node-form .filter-wrapper .filter-guidelines {
+    padding: 0;
+    font-size: 11px;
+    color: #888;
+    margin: 10px 0; }
+  .node-form .filter-wrapper .filter-help {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0; }
+.node-form .vertical-tabs {
+  border: 1px solid #DDD;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  position: relative; }
+  .node-form .vertical-tabs ul.vertical-tabs-list {
+    padding: 0; }
+    .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button {
+      display: inline-block;
+      *display: inline;
+      list-style-type: none;
+      font-size: 14px;
+      margin: 0 5px 5px 0; }
+      .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a {
+        display: inline-block;
+        *display: inline;
+        padding: 4px 10px 4px;
+        margin-bottom: 5px;
+        *margin-left: .3em;
+        margin-right: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        *line-height: 20px;
+        color: #333333;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        *background-color: #e6e6e6;
+        background-image: -ms-linear-gradient(top, white, #e6e6e6);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+        background-image: -o-linear-gradient(top, white, #e6e6e6);
+        background-image: linear-gradient(top, white, #e6e6e6);
+        background-image: -moz-linear-gradient(top, white, #e6e6e6);
+        background-repeat: repeat-x;
+        border: 1px solid #cccccc;
+        *border: 0;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+        border-bottom-color: #b3b3b3;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        *zoom: 1;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a:hover, .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a:active, .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a.active, .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a.disabled, .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a[disabled] {
+          background-color: #e6e6e6;
+          *background-color: #d9d9d9; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a:active, .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a.active {
+          background-color: #cccccc \9; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a:first-child {
+          *margin-left: 0; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a:hover {
+          color: #333333;
+          text-decoration: none;
+          background-color: #e6e6e6;
+          *background-color: #d9d9d9;
+          /* Buttons in IE7 don't get borders, so darken on hover */
+          background-position: 0 -15px;
+          -webkit-transition: background-position 0.1s linear;
+          -moz-transition: background-position 0.1s linear;
+          -ms-transition: background-position 0.1s linear;
+          -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a:focus {
+          outline: thin dotted #333;
+          outline: 5px auto -webkit-focus-ring-color;
+          outline-offset: -2px; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a.active, .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a:active {
+          background-color: #e6e6e6;
+          background-color: #d9d9d9 \9;
+          background-image: none;
+          outline: 0;
+          -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a.disabled, .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a[disabled] {
+          cursor: default;
+          background-color: #e6e6e6;
+          background-image: none;
+          opacity: 0.65;
+          filter: alpha(opacity=65);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a:active {
+          outline: 0; }
+      .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button span.summary {
+        font-size: 12px;
+        color: #CCC;
+        text-decoration: none;
+        display: none; }
+      .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button:last-child {
+        border-bottom: 0; }
+      .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button.selected {
+        border-right: 0; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button.selected a {
+          background: #FFF; }
+  .node-form .vertical-tabs .vertical-tabs-panes {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */ }
+    .node-form .vertical-tabs .vertical-tabs-panes .vertical-tabs-pane {
+      display: block;
+      position: relative;
+      border: 1px solid #CCC;
+      padding: 10px 20px;
+      background: #FFF;
+      max-width: 100%;
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
+      /* Opera/IE 8+ */ }
+      .node-form .vertical-tabs .vertical-tabs-panes .vertical-tabs-pane img {
+        height: auto;
+        max-width: 100%; }
+      .node-form .vertical-tabs .vertical-tabs-panes .vertical-tabs-pane .fieldset-wrapper {
+        max-width: 100%;
+        width: 100%; }
+      .node-form .vertical-tabs .vertical-tabs-panes .vertical-tabs-pane > legend {
+        display: none; }
+.node-form #edit-field-nm-attach-gallery .form-radios {
+  max-height: 200px;
+  overflow-y: auto; }
+.node-form .filefield-sources-list {
+  font-size: 12px; }
+.node-form .tabledrag-toggle-weight-wrapper {
+  position: relative;
+  font-size: 12px;
+  float: right;
+  top: -24px; }
+.node-form .field-type-image .description {
+  margin-top: 5px;
+  margin-bottom: 0; }
+.node-form .field-type-image .form-item {
+  position: relative; }
+.node-form .field-type-image .image-preview {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #CCC; }
+.node-form .field-type-image .image-details {
+  display: block; }
+  .node-form .field-type-image .image-details.with-image {
+    display: none; }
+.node-form .field-type-image .image-widget {
+  padding-left: 55px; }
+  .node-form .field-type-image .image-widget.has-no-image {
+    padding-left: 0; }
+.node-form .field-type-image .image-widget-data {
+  position: relative;
+  width: auto; }
+  .node-form .field-type-image .image-widget-data .image-data,
+  .node-form .field-type-image .image-widget-data .file-size,
+  .node-form .field-type-image .image-widget-data .file-name,
+  .node-form .field-type-image .image-widget-data .file-dimensions,
+  .node-form .field-type-image .image-widget-data .file {
+    font-size: 11px; }
+    .node-form .field-type-image .image-widget-data .image-data a,
+    .node-form .field-type-image .image-widget-data .file-size a,
+    .node-form .field-type-image .image-widget-data .file-name a,
+    .node-form .field-type-image .image-widget-data .file-dimensions a,
+    .node-form .field-type-image .image-widget-data .file a {
+      font-weight: bold; }
+  .node-form .field-type-image .image-widget-data .image-data {
+    margin-bottom: 5px;
+    padding: 10px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #CCC;
+    background: #FFF; }
+    .node-form .field-type-image .image-widget-data .image-data .more-details {
+      float: right; }
+  .node-form .field-type-image .image-widget-data .form-type-textfield {
+    margin: 0px 0px 5px 0px;
+    padding: 5px;
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    background: none; }
+    .node-form .field-type-image .image-widget-data .form-type-textfield input.form-text {
+      margin-bottom: 0; }
+    .node-form .field-type-image .image-widget-data .form-type-textfield .description {
+      margin-top: 2px; }
+    .node-form .field-type-image .image-widget-data .form-type-textfield label {
+      display: none; }
+.node-form .field-type-image .file-icon {
+  display: none; }
+.node-form .field-type-image .draggable .image-preview {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #CCC; }
+.node-form table.tabledrag-processed {
+  border-width: 0; }
+.node-form table .draggable {
+  position: relative;
+  padding: 0;
+  border-width: 0;
+  border: none; }
+  .node-form table .draggable.row-changed {
+    background-color: #FCF8E3; }
+    .node-form table .draggable.row-changed .image-data {
+      border-color: #FBEED5; }
+  .node-form table .draggable .table-cell-wrapper {
+    position: relative;
+    z-index: 1; }
+  .node-form table .draggable td {
+    border: none; }
+  .node-form table .draggable .tabledrag-hide {
+    width: 60px !important;
+    vertical-align: top; }
+    .node-form table .draggable .tabledrag-hide .form-item {
+      margin: 0;
+      padding: 5px;
+      box-shadow: none;
+      border: 0;
+      padding: 0;
+      background: none; }
+      .node-form table .draggable .tabledrag-hide .form-item select {
+        width: 100%;
+        margin: 0; }
+  .node-form table .draggable .image-widget {
+    padding-left: 80px; }
+    .node-form table .draggable .image-widget.has-no-image {
+      padding-left: 0; }
+.node-form table a.tabledrag-handle {
+  z-index: 499;
+  position: relative;
+  float: left;
+  margin-left: -10px; }
+.node-form table .tabledrag-changed {
+  display: none; }
+
+body.page-node-edit #region-content,
+body.page-node-revisions #region-content {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  margin: 0;
+  padding: 0 10px; }
+
+@media all and (min-width: 980px) {
+  .node-form .vertical-tabs {
+    border: 1px solid #DDD;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    position: relative; }
+    .node-form .vertical-tabs ul.vertical-tabs-list {
+      position: relative;
+      z-index: 101;
+      width: 25%;
+      float: left;
+      left: 1px;
+      margin: 0;
+      padding: 0;
+      border: 1px solid #CCC;
+      border-right: 0;
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
+      /* Opera/IE 8+ */ }
+      .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button {
+        display: block;
+        list-style-type: none;
+        font-size: 14px;
+        border-bottom: 1px solid #CCC;
+        border-right: 1px solid #CCC;
+        margin: 0; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a {
+          display: block;
+          padding: 0;
+          margin: 0;
+          background: none;
+          border: 0;
+          text-align: left;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          display: block;
+          padding: 20px 10px;
+          text-decoration: none;
+          background: #EEE; }
+          .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button a:active {
+            outline: 0; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button span.summary {
+          display: block; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button:last-child {
+          border-bottom: 0; }
+        .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button.selected {
+          border-right: 0; }
+          .node-form .vertical-tabs ul.vertical-tabs-list li.vertical-tab-button.selected a {
+            background: #FFF; }
+    .node-form .vertical-tabs .vertical-tabs-panes {
+      max-width: 100%;
+      z-index: 100;
+      width: 100%;
+      position: relative;
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
+      /* Opera/IE 8+ */ }
+      .node-form .vertical-tabs .vertical-tabs-panes .vertical-tabs-pane {
+        display: block;
+        height: 100%;
+        max-width: 100% !important;
+        border: 1px solid #CCC;
+        padding: 20px 40px;
+        background: #FFF;
+        -webkit-box-sizing: border-box;
+        /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;
+        /* Firefox, other Gecko */
+        box-sizing: border-box;
+        /* Opera/IE 8+ */ }
+        .node-form .vertical-tabs .vertical-tabs-panes .vertical-tabs-pane > legend {
+          display: none; } }
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all styles related directly to comments
+ */
+#comments {
+  font-size: 14px; }
+  #comments article {
+    position: relative;
+    border: 1px solid #DDD;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 0; }
+    #comments article header {
+      z-index: 1;
+      background: #EEE;
+      border-bottom: 1px solid #DDD; }
+    #comments article h3.comment-title {
+      margin-top: 0;
+      margin-bottom: 0; }
+      #comments article h3.comment-title a {
+        color: #888;
+        display: block;
+        padding: 20px; }
+        #comments article h3.comment-title a:hover, #comments article h3.comment-title a:focus {
+          color: #999; }
+    #comments article .comment-body {
+      padding: 10px; }
+    #comments article nav.links {
+      text-align: right; }
+    #comments article footer {
+      border-top: 1px solid #DDD;
+      padding: 10px;
+      background: #EEE;
+      font-size: 11px;
+      color: #777;
+      text-align: right; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles that are diretly related to generic block elements
+ */
+.region-sidebar-first .block .block-inner {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+.region-sidebar-first .block ul.menu {
+  margin: 0;
+  padding: 0;
+  font-size: 14px; }
+  .region-sidebar-first .block ul.menu li {
+    margin: 0 0 5px 0;
+    padding: 0;
+    list-style: none; }
+    .region-sidebar-first .block ul.menu li a,
+    .region-sidebar-first .block ul.menu li a:visited {
+      padding: 10px 15px;
+      margin: 0;
+      border: 1px solid #CCC;
+      color: #0678be;
+      display: block;
+      text-decoration: none; }
+      .region-sidebar-first .block ul.menu li a:hover,
+      .region-sidebar-first .block ul.menu li a:visited:hover {
+        color: #999999;
+        background: #EEE; }
+      .region-sidebar-first .block ul.menu li a.active,
+      .region-sidebar-first .block ul.menu li a:visited.active {
+        color: #0678be;
+        border-style: dashed;
+        font-weight: 800; }
+      .region-sidebar-first .block ul.menu li a .item-count,
+      .region-sidebar-first .block ul.menu li a:visited .item-count {
+        float: right;
+        font-weight: normal;
+        color: #888;
+        font-size: 12px; }
+    .region-sidebar-first .block ul.menu li:last-child {
+      margin-bottom: 0; }
+    .region-sidebar-first .block ul.menu li ul {
+      margin-top: 5px;
+      margin-left: 10px; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file has styles for taxonomy term listings and terms on nodes
+ */
+body.page-taxonomy-term #block-system-main .block-inner {
+  position: relative;
+  width: 100%; }
+  body.page-taxonomy-term #block-system-main .block-inner .term-nodes {
+    position: relative; }
+  body.page-taxonomy-term #block-system-main .block-inner .node {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */ }
+    body.page-taxonomy-term #block-system-main .block-inner .node .node-content {
+      border: 1px solid #DDD;
+      background-color: #f8f8f8;
+      padding: 10px;
+      box-sizing: border-box;
+      -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1); }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file handles the primary dropdown navigation provided by a custom
+ * nice menus block.
+ * 
+ * The defaults here are for the mobile & small tablet version of the menu
+ *
+ * Overrides for positioning and behaviors can be found in:
+ * 
+ * omega-nodemaker-alpha-default-normal.scss
+ * omega-nodemaker-alpha-default-wide.scss
+ * 
+ * Javascript adjustments can be found in:
+ * 
+ * nodemaker.js (Drupal.behaviors.nodemakerNiceMenus)
+ * 
+ * Also, the default nicemenus.js has been removed in hook_js_alter()
+ */
+#block-menu-block-nm-core-mobile-menu {
+  display: none; }
+  #block-menu-block-nm-core-mobile-menu h2.block-title {
+    display: none; }
+  #block-menu-block-nm-core-mobile-menu .block-inner {
+    background: #eeeeee;
+    border: 1px solid #cccccc; }
+  #block-menu-block-nm-core-mobile-menu ul.menu {
+    font-weight: 500;
+    font-family: "Neuton", serif;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    float: none; }
+    #block-menu-block-nm-core-mobile-menu ul.menu li {
+      position: relative;
+      display: block;
+      padding: 0;
+      background: none;
+      border: 0;
+      margin: 0;
+      float: none; }
+      #block-menu-block-nm-core-mobile-menu ul.menu li a {
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        background-color: #eeeeee;
+        color: #888888;
+        border-bottom: 1px solid #cccccc;
+        font-weight: 600; }
+        #block-menu-block-nm-core-mobile-menu ul.menu li a:active, #block-menu-block-nm-core-mobile-menu ul.menu li a.active {
+          color: black;
+          border-bottom: 1px solid #cccccc;
+          background-color: white; }
+        #block-menu-block-nm-core-mobile-menu ul.menu li a:focus {
+          color: #999999;
+          border-bottom: 1px solid #cccccc;
+          background-color: white; }
+      #block-menu-block-nm-core-mobile-menu ul.menu li.active-trail > a {
+        color: black;
+        border-bottom: 1px solid #cccccc;
+        background-color: white; }
+      #block-menu-block-nm-core-mobile-menu ul.menu li:last-child a {
+        border-bottom: 0; }
+      #block-menu-block-nm-core-mobile-menu ul.menu li span.menu-children {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        display: block;
+        background-image: url("../images/arrow-down.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: transform .5s ease-in;
+        -moz-transition: -moz-transform .5s ease-in;
+        -o-transition: -o-transform .5s ease-in;
+        -webkit-transition: -webkit-transform .5s ease-in;
+        transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg); }
+        #block-menu-block-nm-core-mobile-menu ul.menu li span.menu-children a.children-toggle {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: block;
+          background: none;
+          border: 0;
+          padding: 0; }
+        #block-menu-block-nm-core-mobile-menu ul.menu li span.menu-children.flip {
+          transform: rotate(-180deg);
+          -o-transform: rotate(-180deg);
+          -webkit-transform: rotate(-180deg);
+          -moz-transform: rotate(-180deg); }
+      #block-menu-block-nm-core-mobile-menu ul.menu li ul {
+        position: relative;
+        display: none;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        border: 0;
+        border-bottom: 1px solid #cccccc; }
+        #block-menu-block-nm-core-mobile-menu ul.menu li ul li {
+          width: 100%; }
+          #block-menu-block-nm-core-mobile-menu ul.menu li ul li a {
+            padding: 10px 20px 10px 50px;
+            background-image: url("../images/menu-subitem.png");
+            background-position: 20px center;
+            background-repeat: no-repeat;
+            border-bottom: 0;
+            background-color: #eeeeee;
+            color: #888888; }
+            #block-menu-block-nm-core-mobile-menu ul.menu li ul li a:focus {
+              background-color: white;
+              color: #999999;
+              border-bottom: 1px solid #cccccc; }
+            #block-menu-block-nm-core-mobile-menu ul.menu li ul li a:active, #block-menu-block-nm-core-mobile-menu ul.menu li ul li a.active {
+              background-color: white;
+              color: black;
+              border-bottom: 1px solid #cccccc; }
+            #block-menu-block-nm-core-mobile-menu ul.menu li ul li a:focus, #block-menu-block-nm-core-mobile-menu ul.menu li ul li a:active, #block-menu-block-nm-core-mobile-menu ul.menu li ul li a.active {
+              border-bottom: 0; }
+          #block-menu-block-nm-core-mobile-menu ul.menu li ul li.active-trail > a {
+            background-color: white;
+            color: black;
+            border-bottom: 1px solid #cccccc;
+            border-bottom: 0; }
+          #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul {
+            position: relative;
+            display: none;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            border: 0;
+            border-bottom: 1px solid #cccccc; }
+            #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li {
+              width: 100%; }
+              #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li a {
+                padding: 10px 20px 10px 80px;
+                background-image: url("../images/submenu-subitem.png");
+                background-position: 20px center;
+                background-repeat: no-repeat;
+                border-bottom: 0;
+                background-color: #eeeeee;
+                color: #888888; }
+                #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li a:focus {
+                  background-color: white;
+                  color: #999999;
+                  border-bottom: 1px solid #cccccc; }
+                #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li a:active, #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li a.active {
+                  background-color: white;
+                  color: black;
+                  border-bottom: 1px solid #cccccc; }
+                #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li a:foucs, #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li a:active, #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li a.active {
+                  border-bottom: 0; }
+              #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li.last a {
+                background-image: url("../images/submenu-subitem-last.png");
+                background-position: 20px center; }
+              #block-menu-block-nm-core-mobile-menu ul.menu li ul li ul li.active-trail > a {
+                background-color: white;
+                color: black;
+                border-bottom: 1px solid #cccccc;
+                border-bottom: 0; }
+          #block-menu-block-nm-core-mobile-menu ul.menu li ul li.last a {
+            background-image: url("../images/menu-subitem-last.png"); }
+          #block-menu-block-nm-core-mobile-menu ul.menu li ul li.last ul li a {
+            background-image: url("../images/submenu-last-subitem.png"); }
+          #block-menu-block-nm-core-mobile-menu ul.menu li ul li.last ul li.last a {
+            background-image: url("../images/submenu-last-subitem-last.png"); }
+
+html.no-touch #block-menu-block-nm-core-mobile-menu ul.menu li a:hover {
+  color: #999999;
+  background-color: white; }
+  html.no-touch #block-menu-block-nm-core-mobile-menu ul.menu li a:hover.children-toggle:hover {
+    background-color: transparent; }
+
+/* Large screen menu (Nice Menus) */
+#block-nm-core-nodemaker-nice-menus-main {
+  display: none; }
+  #block-nm-core-nodemaker-nice-menus-main h2.block-title {
+    display: none; }
+  #block-nm-core-nodemaker-nice-menus-main .block-inner {
+    background: #eeeeee;
+    border: 1px solid #cccccc; }
+  #block-nm-core-nodemaker-nice-menus-main ul.nice-menu {
+    font-weight: 500;
+    font-family: "Neuton", serif;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0; }
+    #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li {
+      position: relative;
+      display: block;
+      padding: 0;
+      background: none;
+      border: 0;
+      margin: 0; }
+      #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li a {
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        background-color: #eeeeee;
+        color: #888888;
+        border-right: 1px solid #cccccc;
+        font-weight: 600; }
+        #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li a:active, #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li a.active {
+          color: black;
+          border-right: 1px solid #cccccc;
+          background-color: white; }
+        #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li a:focus, #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li a:hover {
+          color: #999999;
+          background-color: white; }
+      #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li.active-trail > a {
+        color: black;
+        border-right: 1px solid #cccccc;
+        background-color: white; }
+      #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li:last-child a {
+        border-right: 0; }
+      #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li ul {
+        border: 1px solid #cccccc; }
+        #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li ul li a {
+          border-right: 0;
+          border-bottom: 1px solid #cccccc; }
+        #block-nm-core-nodemaker-nice-menus-main ul.nice-menu li ul li:last-child a {
+          border-bottom: 0; }
+
+#block-menu-block-nm-core-footer-menu {
+  margin-bottom: 20px; }
+  #block-menu-block-nm-core-footer-menu h2.block-title {
+    display: none; }
+  #block-menu-block-nm-core-footer-menu ul.menu li {
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "Neuton", serif; }
+    #block-menu-block-nm-core-footer-menu ul.menu li ul {
+      margin-top: 10px; }
+      #block-menu-block-nm-core-footer-menu ul.menu li ul li, #block-menu-block-nm-core-footer-menu ul.menu li ul li.leaf {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 0; }
+        #block-menu-block-nm-core-footer-menu ul.menu li ul li ul, #block-menu-block-nm-core-footer-menu ul.menu li ul li.leaf ul {
+          margin: 5px 0; }
+          #block-menu-block-nm-core-footer-menu ul.menu li ul li ul li, #block-menu-block-nm-core-footer-menu ul.menu li ul li.leaf ul li {
+            list-style-type: circle;
+            margin-left: 10px;
+            font-size: 12px; }
+
+#block-menu-menu-footer-links {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  margin-bottom: 20px; }
+  #block-menu-menu-footer-links h2.block-title {
+    display: none; }
+  #block-menu-menu-footer-links ul.menu,
+  #block-menu-menu-footer-links .item-list ul {
+    display: inline-block;
+    *display: inline; }
+    #block-menu-menu-footer-links ul.menu li, #block-menu-menu-footer-links ul.menu li.leaf,
+    #block-menu-menu-footer-links .item-list ul li,
+    #block-menu-menu-footer-links .item-list ul li.leaf {
+      font-weight: 800;
+      display: inline-block;
+      *display: inline;
+      padding: 0 8px;
+      border-right: 1px solid #999999; }
+      #block-menu-menu-footer-links ul.menu li:last-child, #block-menu-menu-footer-links ul.menu li.leaf:last-child,
+      #block-menu-menu-footer-links .item-list ul li:last-child,
+      #block-menu-menu-footer-links .item-list ul li.leaf:last-child {
+        border-right: 0; }
+
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file provides default styles for NodeMaker specific blocks & pages
+ * Styles here will not apply when using a ThemeGeeks theme without a NodeMaker installation
+ */
+div.more-link {
+  clear: both; }
+
+#block-views-nm-blog-recent .view-nm-blog,
+#block-views-nm-blog-recent .view-nm-blog-by-user,
+#block-system-main .view-nm-blog,
+#block-system-main .view-nm-blog-by-user {
+  position: relative;
+  width: 100%; }
+  #block-views-nm-blog-recent .view-nm-blog .view-content,
+  #block-views-nm-blog-recent .view-nm-blog-by-user .view-content,
+  #block-system-main .view-nm-blog .view-content,
+  #block-system-main .view-nm-blog-by-user .view-content {
+    position: relative; }
+  #block-views-nm-blog-recent .view-nm-blog .views-row,
+  #block-views-nm-blog-recent .view-nm-blog-by-user .views-row,
+  #block-system-main .view-nm-blog .views-row,
+  #block-system-main .view-nm-blog-by-user .views-row {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px; }
+
+#block-views-nm-announcements-recent,
+#block-system-main .view-nm-announcements {
+  position: relative;
+  width: 100%; }
+  #block-views-nm-announcements-recent .view-content,
+  #block-system-main .view-nm-announcements .view-content {
+    position: relative; }
+  #block-views-nm-announcements-recent .views-row,
+  #block-system-main .view-nm-announcements .views-row {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px; }
+
+#block-views-nm-announcements-recent .views-row {
+  margin-bottom: 20px; }
+  #block-views-nm-announcements-recent .views-row .views-field {
+    margin: 0; }
+
+#block-views-nm-galleries-recent,
+#block-system-main .view-nm-galleries {
+  position: relative;
+  width: 100%; }
+  #block-views-nm-galleries-recent .view-content,
+  #block-system-main .view-nm-galleries .view-content {
+    position: relative; }
+  #block-views-nm-galleries-recent .views-row,
+  #block-system-main .view-nm-galleries .views-row {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px; }
+
+.node-nm-gallery h2.node-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 5px; }
+.node-nm-gallery .photo-count {
+  font-size: 11px;
+  color: #777; }
+.node-nm-gallery.node-teaser h2.node-title {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  margin-bottom: 0; }
+
+.page-landing #block-system-main .view-nm-landing {
+  position: relative;
+  width: 100%; }
+  .page-landing #block-system-main .view-nm-landing .view-content {
+    position: relative; }
+  .page-landing #block-system-main .view-nm-landing .views-row {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0; }
+
+#region-sidebar-first #block-views-nm-galleries-recent .block-inner {
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  background: none; }
+
+#block-views-nm-events-mini-calendar .date-nav-wrapper {
+  margin-top: 0; }
+  #block-views-nm-events-mini-calendar .date-nav-wrapper .date-nav {
+    position: relative;
+    min-height: 36px;
+    padding-bottom: 0; }
+  #block-views-nm-events-mini-calendar .date-nav-wrapper ul.pager {
+    margin: 0;
+    padding: 0; }
+  #block-views-nm-events-mini-calendar .date-nav-wrapper .date-prev,
+  #block-views-nm-events-mini-calendar .date-nav-wrapper .date-next {
+    display: block;
+    background: none;
+    height: 36px;
+    width: 36px;
+    padding: 0;
+    margin: 0;
+    top: 0; }
+    #block-views-nm-events-mini-calendar .date-nav-wrapper .date-prev a,
+    #block-views-nm-events-mini-calendar .date-nav-wrapper .date-next a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 32px;
+      width: 32px;
+      line-height: 32px;
+      text-align: center;
+      padding: 0;
+      margin: 0; }
+  #block-views-nm-events-mini-calendar .date-nav-wrapper .date-heading h3 {
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    line-height: 36px; }
+#block-views-nm-events-mini-calendar .calendar-calendar table thead th {
+  padding: 4px 8px; }
+#block-views-nm-events-mini-calendar .calendar-calendar table tbody td {
+  padding: 4px 8px; }
+
+.node-forum.node-teaser h2.node-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+.node-nm-event .field-name-field-nm-date {
+  font-size: 12px;
+  color: #888; }
+.node-nm-event .event-summary {
+  position: relative;
+  padding-left: 60px;
+  min-height: 55px; }
+  .node-nm-event .event-summary h2.node-title {
+    color: black;
+    font-family: "Neuton", serif;
+    font-weight: 600;
+    letter-spacing: inherit;
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+.node-nm-event .calendar-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 10px;
+  margin-bottom: 0;
+  width: 50px;
+  border: 1px solid #999;
+  text-align: center; }
+  .node-nm-event .calendar-icon .month {
+    background: #999;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: 600; }
+  .node-nm-event .calendar-icon .day {
+    font-size: 32px;
+    line-height: 24px;
+    font-family: "Neuton", serif;
+    font-weight: 600;
+    padding: 5px 0 10px 0; }
+.node-nm-event h2.node-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 0;
+  margin-top: 0; }
+.node-nm-event .field-name-field-nm-date {
+  font-size: 12px; }
+.node-nm-event .field-name-field-nm-headline-image {
+  clear: both;
+  margin-top: 10px; }
+
+.view-display-id-month .view-header,
+.view-display-id-week .view-header,
+.view-display-id-day .view-header,
+.view-display-id-year .view-header {
+  position: relative; }
+.view-display-id-month .date-heading h3,
+.view-display-id-week .date-heading h3,
+.view-display-id-day .date-heading h3,
+.view-display-id-year .date-heading h3 {
+  display: none; }
+.view-display-id-month .date-nav-wrapper,
+.view-display-id-week .date-nav-wrapper,
+.view-display-id-day .date-nav-wrapper,
+.view-display-id-year .date-nav-wrapper {
+  margin-top: 0; }
+  .view-display-id-month .date-nav-wrapper .date-nav,
+  .view-display-id-week .date-nav-wrapper .date-nav,
+  .view-display-id-day .date-nav-wrapper .date-nav,
+  .view-display-id-year .date-nav-wrapper .date-nav {
+    padding-bottom: 0;
+    margin-bottom: 10px; }
+    .view-display-id-month .date-nav-wrapper .date-nav ul.pager,
+    .view-display-id-week .date-nav-wrapper .date-nav ul.pager,
+    .view-display-id-day .date-nav-wrapper .date-nav ul.pager,
+    .view-display-id-year .date-nav-wrapper .date-nav ul.pager {
+      margin: 0; }
+      .view-display-id-month .date-nav-wrapper .date-nav ul.pager li,
+      .view-display-id-week .date-nav-wrapper .date-nav ul.pager li,
+      .view-display-id-day .date-nav-wrapper .date-nav ul.pager li,
+      .view-display-id-year .date-nav-wrapper .date-nav ul.pager li {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: none;
+        margin: 0;
+        padding: 0; }
+        .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a,
+        .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a,
+        .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a,
+        .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a {
+          margin: 0;
+          padding: 0;
+          background: none;
+          border: 0;
+          display: inline-block;
+          *display: inline;
+          padding: 4px 10px 4px;
+          margin-bottom: 5px;
+          *margin-left: .3em;
+          margin-right: 5px;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 18px;
+          *line-height: 20px;
+          color: #333333;
+          text-align: center;
+          text-decoration: none;
+          text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+          vertical-align: middle;
+          cursor: pointer;
+          background-color: #f5f5f5;
+          *background-color: #e6e6e6;
+          background-image: -ms-linear-gradient(top, white, #e6e6e6);
+          background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+          background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+          background-image: -o-linear-gradient(top, white, #e6e6e6);
+          background-image: linear-gradient(top, white, #e6e6e6);
+          background-image: -moz-linear-gradient(top, white, #e6e6e6);
+          background-repeat: repeat-x;
+          border: 1px solid #cccccc;
+          *border: 0;
+          border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+          border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+          border-bottom-color: #b3b3b3;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          border-radius: 4px;
+          *zoom: 1;
+          -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+          .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a:hover, .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a:active, .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a.active, .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a.disabled, .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a[disabled],
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a:hover,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a:active,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a.active,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a.disabled,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a[disabled],
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a:hover,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a:active,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a.active,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a.disabled,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a[disabled],
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a:hover,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a:active,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a.active,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a.disabled,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a[disabled] {
+            background-color: #e6e6e6;
+            *background-color: #d9d9d9; }
+          .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a:active, .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a.active,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a:active,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a.active,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a:active,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a.active,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a:active,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a.active {
+            background-color: #cccccc \9; }
+          .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a:first-child,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a:first-child,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a:first-child,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a:first-child {
+            *margin-left: 0; }
+          .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a:hover,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a:hover,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a:hover,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a:hover {
+            color: #333333;
+            text-decoration: none;
+            background-color: #e6e6e6;
+            *background-color: #d9d9d9;
+            /* Buttons in IE7 don't get borders, so darken on hover */
+            background-position: 0 -15px;
+            -webkit-transition: background-position 0.1s linear;
+            -moz-transition: background-position 0.1s linear;
+            -ms-transition: background-position 0.1s linear;
+            -o-transition: background-position 0.1s linear;
+            transition: background-position 0.1s linear; }
+          .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a:focus,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a:focus,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a:focus,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a:focus {
+            outline: thin dotted #333;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px; }
+          .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a.active, .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a:active,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a.active,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a:active,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a.active,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a:active,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a.active,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a:active {
+            background-color: #e6e6e6;
+            background-color: #d9d9d9 \9;
+            background-image: none;
+            outline: 0;
+            -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+          .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a.disabled, .view-display-id-month .date-nav-wrapper .date-nav ul.pager li a[disabled],
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a.disabled,
+          .view-display-id-week .date-nav-wrapper .date-nav ul.pager li a[disabled],
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a.disabled,
+          .view-display-id-day .date-nav-wrapper .date-nav ul.pager li a[disabled],
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a.disabled,
+          .view-display-id-year .date-nav-wrapper .date-nav ul.pager li a[disabled] {
+            cursor: default;
+            background-color: #e6e6e6;
+            background-image: none;
+            opacity: 0.65;
+            filter: alpha(opacity=65);
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none; }
+      .view-display-id-month .date-nav-wrapper .date-nav ul.pager li.date-prev,
+      .view-display-id-week .date-nav-wrapper .date-nav ul.pager li.date-prev,
+      .view-display-id-day .date-nav-wrapper .date-nav ul.pager li.date-prev,
+      .view-display-id-year .date-nav-wrapper .date-nav ul.pager li.date-prev {
+        float: left; }
+      .view-display-id-month .date-nav-wrapper .date-nav ul.pager li.date-next,
+      .view-display-id-week .date-nav-wrapper .date-nav ul.pager li.date-next,
+      .view-display-id-day .date-nav-wrapper .date-nav ul.pager li.date-next,
+      .view-display-id-year .date-nav-wrapper .date-nav ul.pager li.date-next {
+        float: right; }
+.view-display-id-month .calendar-calendar table th,
+.view-display-id-week .calendar-calendar table th,
+.view-display-id-day .calendar-calendar table th,
+.view-display-id-year .calendar-calendar table th {
+  padding: 8px 16px; }
+.view-display-id-month .calendar-calendar .week-view,
+.view-display-id-month .calendar-calendar .day-view,
+.view-display-id-month .calendar-calendar .year-view,
+.view-display-id-week .calendar-calendar .week-view,
+.view-display-id-week .calendar-calendar .day-view,
+.view-display-id-week .calendar-calendar .year-view,
+.view-display-id-day .calendar-calendar .week-view,
+.view-display-id-day .calendar-calendar .day-view,
+.view-display-id-day .calendar-calendar .year-view,
+.view-display-id-year .calendar-calendar .week-view,
+.view-display-id-year .calendar-calendar .day-view,
+.view-display-id-year .calendar-calendar .year-view {
+  margin-bottom: 20px; }
+
+.calendar-calendar .year-view .calendar-calendar {
+  margin-bottom: 20px; }
+  .calendar-calendar .year-view .calendar-calendar .month-view {
+    border: 1px solid #DDD;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1); }
+  .calendar-calendar .year-view .calendar-calendar .date-nav {
+    background: none;
+    padding: 0;
+    margin-bottom: 5px; }
+  .calendar-calendar .year-view .calendar-calendar .date-heading a {
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-weight: normal;
+    display: block;
+    padding: 10px; }
+  .calendar-calendar .year-view .calendar-calendar table th, .calendar-calendar .year-view .calendar-calendar table td {
+    width: 14.28571428571429%;
+    padding: 8px; }
+
+.node-type-nm-event #block-system-main .node-nm-event .event-date {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+  .node-type-nm-event #block-system-main .node-nm-event .event-date h5 {
+    font-size: 18px;
+    font-family: "Trebuchet MS", Helvetica, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #0678be; }
+  .node-type-nm-event #block-system-main .node-nm-event .event-date span {
+    font-size: 24px;
+    font-family: "Trebuchet MS", Helvetica, Verdana, Arial, sans-serif;
+    color: #7b7c7c; }
+  .node-type-nm-event #block-system-main .node-nm-event .event-date .event-start {
+    width: 49%;
+    float: left;
+    text-align: left; }
+  .node-type-nm-event #block-system-main .node-nm-event .event-date .event-end {
+    width: 49%;
+    float: right;
+    text-align: right; }
+.node-type-nm-event #block-system-main .node-nm-event .event-info {
+  border-top: 1px solid #CCC;
+  padding-top: 10px;
+  margin-top: 10px; }
+  .node-type-nm-event #block-system-main .node-nm-event .event-info .field-label {
+    font-size: 18px;
+    font-family: "Trebuchet MS", Helvetica, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #0678be; }
+  .node-type-nm-event #block-system-main .node-nm-event .event-info .event-map {
+    float: right;
+    width: 65%; }
+  .node-type-nm-event #block-system-main .node-nm-event .event-info .event-details {
+    float: left;
+    width: 34%; }
+    .node-type-nm-event #block-system-main .node-nm-event .event-info .event-details .field-items {
+      font-size: 14px;
+      margin-bottom: 20px; }
+    .node-type-nm-event #block-system-main .node-nm-event .event-info .event-details .event-address .name-block {
+      font-weight: bold; }
+
+#block-views-nm-events-upcoming {
+  margin-bottom: 20px; }
+  #block-views-nm-events-upcoming .view-display-id-upcoming > .view-content {
+    border: 1px solid #DDD;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; }
+  #block-views-nm-events-upcoming .view-nm-events h2.node-title {
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 0; }
+  #block-views-nm-events-upcoming .view-nm-events .attachment h2.node-title {
+    color: black;
+    font-family: "Neuton", serif;
+    font-weight: 600;
+    letter-spacing: inherit;
+    margin: 20px 0 10px 0;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 0;
+    margin-top: 0; }
+  #block-views-nm-events-upcoming .view-nm-events .node {
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 10px;
+    padding-bottom: 10px; }
+  #block-views-nm-events-upcoming .view-nm-events ul li:last-child .node {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  #block-views-nm-events-upcoming .view-nm-events .attachment .node,
+  #block-views-nm-events-upcoming .view-nm-events .attachment ul li:last-child .node {
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 20px;
+    padding-bottom: 20px; }
+  #block-views-nm-events-upcoming .view-nm-events .attachment .node .event-summary {
+    margin-bottom: 10px; }
+  #block-views-nm-events-upcoming .view-nm-events .item-list ul {
+    margin: 0;
+    font-size: 12px; }
+    #block-views-nm-events-upcoming .view-nm-events .item-list ul li {
+      list-style-type: none;
+      margin: 0; }
+
+#block-system-powered-by {
+  font-size: 10px;
+  line-height: 14px; }
+  #block-system-powered-by h3 {
+    margin: 0;
+    display: inline-block;
+    *display: inline;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif; }
+  #block-system-powered-by .item-list ul {
+    display: inline-block;
+    *display: inline; }
+    #block-system-powered-by .item-list ul li {
+      font-weight: 800;
+      display: inline-block;
+      *display: inline;
+      padding: 0 8px;
+      border-right: 1px solid #999999; }
+      #block-system-powered-by .item-list ul li:last-child {
+        border-right: 0; }
+
+.view-display-id-gallery_thumbs .colorbox a {
+  padding: 0; }
+
+#block-system-main .view-display-id-thumb_page .views-row {
+  margin-bottom: 5px;
+  display: block; }
+#block-system-main .view-display-id-thumb_page .colorbox a {
+  display: block; }
+
+.block-boxes-gallery {
+  margin-top: 20px; }
+
+.page-landing h1#page-title {
+  display: none; }
+.page-landing #breadcrumb {
+  display: none; }
+.page-landing .zone-content {
+  padding-top: 20px; }
+
+#block-menu-block-nm-core-footer-menu {
+  display: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.form-submit {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  display: inline-block;
+  *display: inline;
+  padding: 4px 10px 4px;
+  margin-bottom: 5px;
+  *margin-left: .3em;
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  *line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -ms-linear-gradient(top, white, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+  background-image: -o-linear-gradient(top, white, #e6e6e6);
+  background-image: linear-gradient(top, white, #e6e6e6);
+  background-image: -moz-linear-gradient(top, white, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  .form-submit:hover, .form-submit:active, .form-submit.active, .form-submit.disabled, .form-submit[disabled] {
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9; }
+  .form-submit:active, .form-submit.active {
+    background-color: #cccccc \9; }
+  .form-submit:first-child {
+    *margin-left: 0; }
+  .form-submit:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+    /* Buttons in IE7 don't get borders, so darken on hover */
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -ms-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear; }
+  .form-submit:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+  .form-submit.active, .form-submit:active {
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  .form-submit.disabled, .form-submit[disabled] {
+    cursor: default;
+    background-color: #e6e6e6;
+    background-image: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+
+.zone {
+  margin: 0 10px; }
+
+#zone-user-wrapper {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  max-width: 100%;
+  background: -moz-linear-gradient(top, white 0%, #cccccc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #cccccc));
+  background: -webkit-linear-gradient(top, white 0%, #cccccc 100%);
+  background: -o-linear-gradient(top, white 0%, #cccccc 100%);
+  background: -ms-linear-gradient(top, white 0%, #cccccc 100%);
+  background: linear-gradient(top, white 0%, #cccccc 100%);
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
+  padding: 5px 0;
+  border-top: 2px solid #999; }
+  #zone-user-wrapper .mobile-menu a {
+    display: inline-block;
+    *display: inline;
+    padding: 4px 10px 4px;
+    margin-bottom: 5px;
+    *margin-left: .3em;
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    *line-height: 20px;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, white, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+    background-image: -o-linear-gradient(top, white, #e6e6e6);
+    background-image: linear-gradient(top, white, #e6e6e6);
+    background-image: -moz-linear-gradient(top, white, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #cccccc;
+    *border: 0;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    *zoom: 1;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-right: 5px; }
+    #zone-user-wrapper .mobile-menu a:hover, #zone-user-wrapper .mobile-menu a:active, #zone-user-wrapper .mobile-menu a.active, #zone-user-wrapper .mobile-menu a.disabled, #zone-user-wrapper .mobile-menu a[disabled] {
+      background-color: #e6e6e6;
+      *background-color: #d9d9d9; }
+    #zone-user-wrapper .mobile-menu a:active, #zone-user-wrapper .mobile-menu a.active {
+      background-color: #cccccc \9; }
+    #zone-user-wrapper .mobile-menu a:first-child {
+      *margin-left: 0; }
+    #zone-user-wrapper .mobile-menu a:hover {
+      color: #333333;
+      text-decoration: none;
+      background-color: #e6e6e6;
+      *background-color: #d9d9d9;
+      /* Buttons in IE7 don't get borders, so darken on hover */
+      background-position: 0 -15px;
+      -webkit-transition: background-position 0.1s linear;
+      -moz-transition: background-position 0.1s linear;
+      -ms-transition: background-position 0.1s linear;
+      -o-transition: background-position 0.1s linear;
+      transition: background-position 0.1s linear; }
+    #zone-user-wrapper .mobile-menu a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+    #zone-user-wrapper .mobile-menu a.active, #zone-user-wrapper .mobile-menu a:active {
+      background-color: #e6e6e6;
+      background-color: #d9d9d9 \9;
+      background-image: none;
+      outline: 0;
+      -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+    #zone-user-wrapper .mobile-menu a.disabled, #zone-user-wrapper .mobile-menu a[disabled] {
+      cursor: default;
+      background-color: #e6e6e6;
+      background-image: none;
+      opacity: 0.65;
+      filter: alpha(opacity=65);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+  #zone-user-wrapper #block-search-form {
+    display: none;
+    margin-top: 10px; }
+  #zone-user-wrapper #block-user-login {
+    display: none;
+    margin-top: 10px; }
+    #zone-user-wrapper #block-user-login .block-title {
+      display: none; }
+    #zone-user-wrapper #block-user-login label {
+      display: none; }
+    #zone-user-wrapper #block-user-login .item-list {
+      display: block;
+      float: right; }
+      #zone-user-wrapper #block-user-login .item-list ul li a {
+        margin-right: 5px; }
+  #zone-user-wrapper .form-item,
+  #zone-user-wrapper .form-actions {
+    display: block;
+    margin: 0 0 5px 0;
+    position: relative; }
+    #zone-user-wrapper .form-item input,
+    #zone-user-wrapper .form-actions input {
+      margin-bottom: 0; }
+    #zone-user-wrapper .form-item input.form-text,
+    #zone-user-wrapper .form-actions input.form-text {
+      position: relative;
+      width: 100%;
+      height: 42px;
+      margin: 0;
+      display: block;
+      padding: 10px;
+      font-weight: 600;
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
+      /* Opera/IE 8+ */ }
+    #zone-user-wrapper .form-item .form-submit,
+    #zone-user-wrapper .form-actions .form-submit {
+      display: block;
+      float: left;
+      width: auto; }
+  #zone-user-wrapper #block-system-user-menu {
+    display: none;
+    margin-top: 10px; }
+    #zone-user-wrapper #block-system-user-menu .block-title {
+      display: none; }
+  #zone-user-wrapper ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 12px; }
+    #zone-user-wrapper ul li {
+      position: relative;
+      list-style-type: none;
+      display: inline-block;
+      *display: inline;
+      margin: 0;
+      padding: 0; }
+      #zone-user-wrapper ul li a {
+        display: inline-block;
+        *display: inline;
+        padding: 4px 10px 4px;
+        margin-bottom: 5px;
+        *margin-left: .3em;
+        margin-right: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        *line-height: 20px;
+        color: #333333;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        *background-color: #e6e6e6;
+        background-image: -ms-linear-gradient(top, white, #e6e6e6);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+        background-image: -o-linear-gradient(top, white, #e6e6e6);
+        background-image: linear-gradient(top, white, #e6e6e6);
+        background-image: -moz-linear-gradient(top, white, #e6e6e6);
+        background-repeat: repeat-x;
+        border: 1px solid #cccccc;
+        *border: 0;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+        border-bottom-color: #b3b3b3;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        *zoom: 1;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+        #zone-user-wrapper ul li a:hover, #zone-user-wrapper ul li a:active, #zone-user-wrapper ul li a.active, #zone-user-wrapper ul li a.disabled, #zone-user-wrapper ul li a[disabled] {
+          background-color: #e6e6e6;
+          *background-color: #d9d9d9; }
+        #zone-user-wrapper ul li a:active, #zone-user-wrapper ul li a.active {
+          background-color: #cccccc \9; }
+        #zone-user-wrapper ul li a:first-child {
+          *margin-left: 0; }
+        #zone-user-wrapper ul li a:hover {
+          color: #333333;
+          text-decoration: none;
+          background-color: #e6e6e6;
+          *background-color: #d9d9d9;
+          /* Buttons in IE7 don't get borders, so darken on hover */
+          background-position: 0 -15px;
+          -webkit-transition: background-position 0.1s linear;
+          -moz-transition: background-position 0.1s linear;
+          -ms-transition: background-position 0.1s linear;
+          -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear; }
+        #zone-user-wrapper ul li a:focus {
+          outline: thin dotted #333;
+          outline: 5px auto -webkit-focus-ring-color;
+          outline-offset: -2px; }
+        #zone-user-wrapper ul li a.active, #zone-user-wrapper ul li a:active {
+          background-color: #e6e6e6;
+          background-color: #d9d9d9 \9;
+          background-image: none;
+          outline: 0;
+          -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+        #zone-user-wrapper ul li a.disabled, #zone-user-wrapper ul li a[disabled] {
+          cursor: default;
+          background-color: #e6e6e6;
+          background-image: none;
+          opacity: 0.65;
+          filter: alpha(opacity=65);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none; }
+
+body.toolbar #zone-user-wrapper {
+  position: relative; }
+
+#zone-branding-wrapper {
+  margin-top: 10px; }
+  #zone-branding-wrapper .logo-img {
+    text-align: center; }
+
+#zone-footer-wrapper {
+  background-color: #eeeeee;
+  border-top: 5px solid #999999;
+  padding: 20px 0 40px 0;
+  font-size: 12px;
+  margin: 0;
+  margin-top: 40px; }
+  #zone-footer-wrapper ul {
+    margin: 0;
+    padding: 0; }
+    #zone-footer-wrapper ul li {
+      list-style-type: none;
+      list-style-image: none;
+      margin: 0;
+      padding: 0; }
+      #zone-footer-wrapper ul li a {
+        color: #999999;
+        font-weight: 600;
+        text-decoration: none; }
+        #zone-footer-wrapper ul li a:hover {
+          color: #777777;
+          text-decoration: underline; }
+        #zone-footer-wrapper ul li a:active {
+          color: #777777; }
+
+#block-nm-core-nm-core-social-links h2.block-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 0; }
+#block-nm-core-nm-core-social-links .item-list ul li {
+  display: block;
+  margin: 5px 0; }
+  #block-nm-core-nm-core-social-links .item-list ul li a {
+    display: block;
+    background: #FFF;
+    border: 1px solid #CCC;
+    padding: 5px;
+    text-decoration: none;
+    -moz-transition: padding .15s ease-in;
+    -o-transition: padding .15s ease-in;
+    -webkit-transition: padding .15s ease-in;
+    transition: padding .15s ease-in; }
+    #block-nm-core-nm-core-social-links .item-list ul li a:hover, #block-nm-core-nm-core-social-links .item-list ul li a:focus {
+      border: 1px solid #BBB;
+      text-decoration: none;
+      padding-left: 10px; }
+    #block-nm-core-nm-core-social-links .item-list ul li a img {
+      vertical-align: middle; }
+    #block-nm-core-nm-core-social-links .item-list ul li a .social-label {
+      font-size: 14px;
+      line-height: 14px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 800;
+      font-weight: normal;
+      margin-left: 10px;
+      line-height: 16px; }
+
+.flexslider {
+  border: 0px; }
+
+html.touch .flex-direction-nav {
+  display: none; }

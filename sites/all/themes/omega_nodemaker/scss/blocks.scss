@@ -1,0 +1,69 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles that are diretly related to generic block elements
+ */
+
+.region-sidebar-first {
+
+  .block {
+
+    .block-inner {  
+      //@include element-background();
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    
+    ul.menu {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      
+      
+      li {
+        margin: 0 0 5px 0;
+        padding: 0;
+        list-style: none;        
+        a,
+        a:visited {
+          padding: 10px 15px;
+          margin: 0;
+          border: 1px solid #CCC;
+          color: $defaultlinkcolor;
+          display: block;
+          text-decoration: none;
+          
+          &:hover {
+            color: $defaultlinkhovercolor;
+            background: #EEE;
+          }
+          &.active {
+            color: $defaultlinkcolor;
+            border-style: dashed;
+            font-weight: $font_ultrabold;
+          }
+          .item-count {
+            float: right;
+            font-weight: normal;
+            color: #888;
+            font-size: 12px;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        ul {
+          margin-top: 5px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

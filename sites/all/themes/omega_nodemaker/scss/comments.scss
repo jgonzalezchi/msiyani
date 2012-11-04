@@ -1,0 +1,63 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all styles related directly to comments
+ */
+ 
+#comments {
+  font-size: 14px;
+  
+  article {
+    position: relative;
+    @include element-background();
+    margin-bottom: 20px;
+    padding: 0;
+    
+    header {
+      
+      z-index: 1;
+      background: #EEE;
+      border-bottom: 1px solid #DDD;
+    }
+    
+    h3.comment-title {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      a {
+        color: #888;
+        display: block;
+        padding: 20px;
+        
+        &:hover,
+        &:focus {
+          color: #999;
+        }
+      }
+    }
+    
+    .comment-body {
+      padding: 10px;
+    }
+    
+    nav.links {
+      text-align: right;
+    }
+    
+    footer {
+      border-top: 1px solid #DDD;
+      padding: 10px;
+      background: #EEE;
+      font-size: 11px;
+      color: #777;
+      text-align: right;
+    }
+    
+  }
+}

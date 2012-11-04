@@ -1,0 +1,111 @@
+/* Include Default Variables & Mixins */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the variables used throughout the entire NodeMaker
+ * suite of SCSS files. 
+ *
+ * You can achieve a very different look for your site simply by editing 
+ * the variables present on this page.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains various mixins to be used on elements throughout the site.
+ */
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles and mixins related to header fonts
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #0678be;
+    text-decoration: none; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      color: #999999; }
+    h1 a.active, h2 a.active, h3 a.active, h4 a.active, h5 a.active, h6 a.active {
+      color: black; }
+
+h1 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 38px;
+  line-height: 38px; }
+
+h1#page-title {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h2 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 30px;
+  line-height: 30px; }
+
+h3 {
+  color: black;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 24px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h5 {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h6 {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
+
+h2.node-title {
+  margin-top: 5px; }
+
+/* Basic button style for submit buttons and some links */
+/* End Variables & Mixins */

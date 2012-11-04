@@ -1,0 +1,40 @@
+// make the breadcrumb that was hidden on mobile visible.
+#breadcrumb {
+  display: block;
+}
+
+// move the logo back to the left
+#zone-branding-wrapper {
+  .logo-img {
+    text-align: left;
+  }
+}
+
+#zone-footer-wrapper {
+  
+  // footer copy of the main menu
+  #block-menu-block-nm-core-footer-menu {
+    // stack the menus differently    
+    ul.menu li {
+      float: left;
+      padding: 0px;
+      margin-right: 20px;
+      width: 160px;
+      ul li {
+        display: block;
+        float: none;
+        font-weight: normal;
+        padding: 0;
+      }
+      
+      // last in "row"
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+

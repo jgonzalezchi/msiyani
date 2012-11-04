@@ -1,0 +1,109 @@
+/**
+ * Project:         Omega NodeMaker
+ * Company:         ThemeGeeks
+ * Website:         http://themegeeks.com
+ * Project:         http://drupal.org/project/omega_nodemaker
+ * Documentation    http://themegeeks.com/build/nodemaker
+ * 
+ * Maintainer:      Jake Strawn (himerus) http://drupal.org/user/159141
+ *  
+ * This file contains all the styles and mixins related to header fonts
+ */
+
+@mixin h1($size: 38px) {
+  color: $defaultheadercolor;
+  font-family: $headerfont;
+  font-weight: $font_semibold;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: $size;
+  line-height: $size; 
+}
+
+@mixin h2($size: 30px) {
+  color: $defaultheadercolor;
+  font-family: $headerfont;
+  font-weight: $font_semibold;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: $size;
+  line-height: $size;
+}
+
+@mixin h3($size: 24px) {
+  color: $defaultheadercolor;
+  font-family: $headerfont;
+  font-weight: $font_semibold;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  font-size: $size;
+  line-height: $size; 
+}
+@mixin h4($size: 20px) {
+  font-size: $size;
+  line-height: $size; 
+  font-family: $bodyfont;
+  font-weight: $font_ultrabold;
+}
+
+@mixin h5($size: 18px) {
+  font-size: $size;
+  line-height: $size; 
+  font-family: $bodyfont;
+  font-weight: $font_ultrabold;
+}
+
+@mixin h6($size: 14px) {
+  font-size: $size;
+  line-height: $size; 
+  font-family: $bodyfont;
+  font-weight: $font_ultrabold;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: $defaultheadercolor;
+  font-family: $headerfont;
+  font-weight: $font_semibold;
+  letter-spacing: inherit;
+  margin: 20px 0 10px 0;
+  
+  a {
+    color: $defaultheaderlinkcolor;
+    text-decoration: none;
+    
+    &:hover {
+      color: $defaultheaderlinkhovercolor;
+    }
+    &.active {
+      color: $defaultheadercolor;
+    }
+  }
+}
+
+h1 {
+  @include h1();
+}
+h1#page-title {
+  @include h2();
+}
+h2 {
+  @include h2();
+}
+h3 {
+  @include h3();
+}
+h4 {
+  @include h4();
+}
+h5 {
+  @include h5();
+}
+h6 {
+  @include h6();
+}
+
+// special header types
+h2.node-title {
+  margin-top: 5px;
+}
